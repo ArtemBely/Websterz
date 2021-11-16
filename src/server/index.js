@@ -20,6 +20,7 @@ import signupRouter from './routes/signup';
 import profileRouter from './routes/profile';
 import enterRouter from './routes/enter';
 import apiRouter from './routes/api';
+import gatRouter from './routes/gatsby';
 
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
@@ -71,6 +72,7 @@ app.use('/signup', signupRouter);
 app.use('/profile', profileRouter);
 app.use('/enter', enterRouter);
 app.use('/api', apiRouter);
+app.use('/gatsby', gatRouter);
 
 app.get('/', notLoggedIn, (req, res, next) => {
   let cond = req.isAuthenticated();
@@ -156,4 +158,4 @@ app.use((req, res, next) => {  //<-- заменить если появится 
      next (err);
 });
 
-app.listen(port, () => {console.log('connected!')});
+app.listen(8080, () => {console.log('connected!')});
