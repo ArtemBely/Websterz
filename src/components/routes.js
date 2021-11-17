@@ -1,24 +1,10 @@
-import Enter from './Enter';
-import Registration from './Registration';
-import Profile from './Profile';
-import { getUsers } from './fetchData';
+import Main from './Main';
 
 const routes = [
   {
-    path: ['/', '/enter'],
+    path: '/',
     exact: true,
-    component: Enter
-  },
-  {
-    path: ['/registration', '/signup'],
-    exact: true,
-    component: Registration
-  },
-  {
-    path: ['/profile', '/profile/canceled'],
-    exact: true,
-    component: Profile,
-    fetchInitialData: () => getUsers()
+    component: Main
   }
 ]
 

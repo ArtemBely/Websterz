@@ -1,44 +1,22 @@
 import React from 'react';
-import search from '../../public/images/Ellipse 40.svg';
-import { getUsers } from './fetchData';
+import { NavLink } from 'react-router-dom';
+import bee from '../../public/images/Frame 17.svg';
 
 
-class Header extends React.Component{
+function Header() {
 
-  constructor() {
-
-    super()
-
-    this.state = {
-      info
-    }
-  }
-
-  componentDidMount() {
-    if(!this.state.info) {
-      getUsers().then(info => this.setState({ info: info }))
-      console.log(this.state.info);
-    }
-  }
-
-  render() {
 
     return (
-      <div className='header'>
-         <p className='subscribe'> Подписки </p>
-           <p className='unsubscribe'> Отписались </p>
-            <a href='/profile/logout' id='exit'>Выйти</a>
-             <form action='#' method='POST'>
-              <input type='text' name='search' className='searchForm'/>
-              <button type='submit' style={{border: 'none'}}><img src={search} id='searchImg'/></button>
-             </form>
-           <a href='/postpone' id='postpone'>Отложить</a>
-          <a href='/unsubscribe' id='unsubscribe2'>Отписать</a>
-        <a href='/table' id='table'>Экспорт в xslx</a>
-
+      <div className='wrap_header'>
+          <div className='header'>
+             <p className='wrap_logo'><NavLink to='/'><img src={bee} id='bee'/></NavLink></p>
+              <NavLink to='#' className='header_link team_header'>Команда</NavLink>
+              <NavLink to='#' className='header_link vote_header'>Голосовать</NavLink>
+              <NavLink to='#' className='header_link'>Контакты</NavLink>
+              <NavLink to='/enter' className='header_link'>Войти</NavLink>
+          </div>
       </div>
     )
-  }
 
 }
 

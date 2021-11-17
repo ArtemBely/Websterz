@@ -1,280 +1,71 @@
-.wrap_reg, .wrap_enter {
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.eot');
+    src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.eot');
+    src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Oswald-Bold';
+    src: url('../fonts/Oswald-Bold.eot');
+    src: url('../fonts/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Bold.woff') format('woff'),
+    url('../fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../fonts/Oswald-Regular.eot');
+    src: url('../fonts/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Oswald-Regular.woff') format('woff'),
+    url('../fonts/Oswald-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto-Regular';
+}
+.wrap_header {
+  background: #0B0B0C;
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.reg {
-  position: relative;
-  width: 1290px;
-  display: grid;
-  justify-content: center;
-  top: 300px;
-}
-.wrap_signup {
-  display: grid;
-  width: 400px;
-}
-.reg_link {
-  position: relative;
-  left: 230px;
-  top: 200px;
-}
-.wrap_formEnter {
-  display: grid;
-  width: 400px;
-  top: 300px;
-  position: relative;
-}
-.wrap_profile {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.profile {
-  position: relative;
-  width: 1320px;
-  display: grid;
-  grid-template-columns: repeat(2, 20%) 1fr;
 }
 .header {
   position: relative;
-  top: 40px;
+  width: 1180px;
   display: grid;
-  grid-template-columns: repeat(2, 20%) repeat(3, 1fr);
-  grid-column: 1 / 6;
+  grid-template-columns: 52% repeat(4, 12%);
+  background: #0B0B0C;
 }
-.subscribe {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  grid-column: 1 / 2;
-  color: black;
+.header_link {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    line-height: 21px;
+    height: 30px;
+    position: relative;
+    top: 27px;
+    left: 91px;
 }
-.unsubscribe {
-  position: relative;
-  left: -29px;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
-  text-decoration-line: underline;
-  grid-column: 2 / 3;
-  color: black
+.vote_header {
+  left: 74px;
 }
-#unsubscribe2 {
-  grid-column: 4 / 5;
-  width: 69px;
-  height: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  color: black;
-  position: relative;
-  left: 304px;
-  top: 40px;
-}
-#exit {
-  display: grid;
-  grid-column: 5 / 6;
-  justify-content: end;
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 34px;
-  text-decoration-line: underline;
-  position: relative;
-  top: 0px;
-  left: 212px;
-  height: 30px;
-  width: 63px;
-  color: black;
-}
-#postpone {
-  grid-column: 3 / 4;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  width: 79px;
-  height: 30px;
-  position: relative;
-  left: 421px;
-  top: 40px;
-  color: black;
-}
-#table {
-  top: 40px;
-  width: 121px;
-  height: 30px;
-  grid-column: 5 / 6;
-  position: relative;
-  left: 167px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  color: black;
-}
-.searchForm {
-  position: relative;
-  top: 44px;
-  height: 40px;
-  width: 255px;
-  border: 0 0 0 0;
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  font-size: 24px;
-  z-index: 11;
-}
-#searchImg {
-  position: relative;
-  left: -29px;
-  top: 52px;
-  cursor: pointer;
-  z-index: 100;
-}
-.wrap_userData {
-  position: relative;
-  top: 168px;
-  display: grid;
-  justify-content: center;
-  width: 1320px;
-  grid-template-columns: 1fr;
-  grid-gap: 40px;
-}
-.userInfo {
-  width: 100%;
-  grid-column: 1 / 2;
-  grid-template-columns: 60% 40%;
-  position: relative;
-  display: grid;
-}
-.infoBlock1 {
-  grid-column: 1 / 2;
-  position: relative;
-  top: -36px;
-  grid-template-columns: repeat(2, 6%) 33% 55%;
-  grid-template-rows: repeat(3, 1fr);
-  display: grid;
-}
-.infoBlock2 {
-  grid-column: 2 / 3;
-  position: relative;
-  top: -33px;
-}
-.areas {
-  position: relative;
-  width: 520px;
-  height: 105px;
-  top: 15px;
-  left: 26px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  padding: 7px;
-  border: 1px solid #6D6D6D;
-  box-sizing: border-box;
-  border-radius: 0px;
-}
-.formAdmin {
-  position: relative;
-  top: -25px;
-}
-.buttonChange {
-  position: relative;
-  z-index: 1;
-  top: -10px;
-  left: 470px;
-}
-.eachCheck {
-  position: relative;
-  top: 15px;
-  width: 24px;
-  height: 24px;
-}
-.credentials {
-  position: relative;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  height: 50px;
-}
-.usAdd {
-  position: relative;
-  top: -29px;
-  position: relative;
-  top: -26px;
-  width: 740px;
-  grid-row: 2 / 3;
-  grid-column: 1 / 5;
-}
-.usTime {
-  position: relative;
-  top: -29px;
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
-}
-.usPay {
-  position: relative;
-  top: -29px;
-  grid-column: 3 / 4;
-  grid-row: 3 / 4;
-}
-.usPhone {
-  position: relative;
-  top: -29px;
-  grid-column: 4 / 5;
-  grid-row: 3 / 4;
-}
-#ars::placeholder {
-  color: black;
-}
-.areasDouble {
-  position: relative;
-  width: 520px;
-  height: 105px;
-  top: 15px;
-  left: 26px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 25px;
-  padding: 7px;
-  padding-bottom: 64px;
-  padding-left: 7px;
-  border: 1px solid #6D6D6D;
-  box-sizing: border-box;
-  border-radius: 0px;
-}
-.actSub {
-  font-weight: 700;
-  text-decoration: none;
-}
-.subAdd {
-  font-weight: 400 !important;
-}
-#postpone2 {
-  grid-column: 3 / 4;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  width: 79px;
-  height: 30px;
-  position: relative;
-  left: 281px;
-  top: 40px;
-  color: black;
-}
-#unsubscribe3 {
-  grid-column: 4 / 5;
-  width: 258px;
-  height: 30px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  color: #808080;
-  position: relative;
-  left: 141px;
-  top: 40px;
-}
-.detectDelete {
-  position: relative;
+.team_header {
+  left: 73px;
 }

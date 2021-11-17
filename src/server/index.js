@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import App from '../components/App';
-import Enter from '../components/Enter';
 import Routes from '../components/routes';
 import express from 'express';
 import { renderToString } from 'react-dom/server';
@@ -15,12 +14,7 @@ import passport from 'passport';
 import flash from 'connect-flash';
 import cors from 'cors';
 
-import regRouter from './routes/registration';
-import signupRouter from './routes/signup';
-import profileRouter from './routes/profile';
 import enterRouter from './routes/enter';
-import apiRouter from './routes/api';
-import gatRouter from './routes/gatsby';
 
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
@@ -50,6 +44,8 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use('/enter', enterRouter);
+
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -67,18 +63,12 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/registration', regRouter);
-app.use('/signup', signupRouter);
-app.use('/profile', profileRouter);
-app.use('/enter', enterRouter);
-app.use('/api', apiRouter);
-app.use('/gatsby', gatRouter);
-
+/*
 app.get('/', notLoggedIn, (req, res, next) => {
   let cond = req.isAuthenticated();
   const signin = renderToString(
     <StaticRouter>
-       <Enter />
+       <Main />
     </StaticRouter>
   )
   res.send(
@@ -99,7 +89,7 @@ app.get('/', notLoggedIn, (req, res, next) => {
         </html>`
     );
 });
-
+*/
 app.get('*', (req, res, next) => {
   const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
   const promise = activeRouter.fetchInitialData ?
@@ -135,12 +125,14 @@ app.get('*', (req, res, next) => {
   }).catch(next)
 });
 
+/*
 function notLoggedIn(req, res, next) {
   if(!req.isAuthenticated()) {
     return next();
   }
   res.redirect('/profile');
 }
+*/
 /*
 app.use((error, req, res, next) => {
   res.status(error.status);
