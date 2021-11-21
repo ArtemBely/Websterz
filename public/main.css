@@ -38,6 +38,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto-Regular';
+  background: black;
 }
 .wrap_header {
   background: #0B0B0C;
@@ -206,5 +207,283 @@ body {
   top: -87px;
   left: 108px;
   width: 200px;
+}
+
+.wrap_game {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 780px;
+  box-shadow: inset 0px 0px 74px 73px black;
+  background-image: url("/images/Frame 510.png");
+}
+.game {
+  width: 1180px;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 60% 20%;
+}
+#mainScreen {
+  position: absolute;
+  z-index: -1;
+  top: -6px;
+}
+.next_game {
+    color: white;
+    text-shadow: 0px 20px 50px #000000;
+    font-size: 50px;
+    font-family: "Oswald-Bold";
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    z-index: 1;
+}
+.game_window {
+  position: relative;
+  width: 1180px;
+  height: 370px;
+  background: rgba(11, 11, 12, 0.7);
+  box-shadow: 0px 0px 33px #000000;
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  top: 43px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.for_window_game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.choice_inside {
+  width: 275px;
+  height: 61px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFAC22;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  top: -44px;
+  cursor: pointer;
+}
+.do_choice {
+  display: flex;
+  justify-content: center;
+}
+.vs {
+  color: #FFAC22;
+  font-size: 50px;
+  line-height: 117%;
+  font-family: "Oswald-Regular";
+}
+.enemy {
+  font-size: 50px;
+  color: white;
+  position: relative;
+  right: 111px;
+}
+.teamLogoSvg {
+  position: relative;
+  left: 111px;
+}
+.votes {
+  font-family: 'Oswald-Bold';
+  font-style: normal;
+  font-size: 50px;
+  position: relative;
+  top: 50px;
+  line-height: 117.2%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FAFAFA;
+}
+.wrap_present {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 640px;
+  background: black;
+}
+.present {
+  position: relative;
+  top: 25px;
+  right: 30px;
+  width: 1180px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-columns: 1fr;
+}
+.wrap_wear {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.each_wear {
+  width: 305px;
+  height: 430px;
+  background: url("/images/Group 19.png");
+  transition: 0.2s;
+  cursor: pointer;
+}
+.each_wear:nth-child(1):hover {
+  background: url("/images/Group 18.png");
+}
+.each_wear:nth-child(2):hover {
+  background: url("/images/Group 18.png");
+}
+.each_wear:nth-child(3):hover {
+  background: url("/images/Group 18.png");
+}
+.each_wear:nth-child(4):hover {
+  background: url("/images/Group 18.png");
+}
+
+.wrap_footer {
+  position: relative;
+  top: 190px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #232226;
+  height: 550px;
+}
+.footer {
+  position: relative;
+  width: 1180px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.high_footer {
+  position: relative;
+  top: 86px;
+  display: grid;
+  grid-template-columns: 60% repeat(4, 1fr);
+}
+.each_footer {
+  color: white;
+  position: relative;
+  top: 17px;
+  display: flex;
+  justify-content: end;
+  font-size: 18px;
+  height: 20px;
+  line-height: 21px;
+}
+.thirdFoot {
+  left: 8px;
+}
+.secondFoot {
+  right: 21px;
+}
+.firstFoot {
+  right: 66px;
+}
+.contact_us {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  color: white;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  height: 30px;
+}
+.credentials {
+  font-size: 20px;
+  line-height: 140%;
+  color: white;
+}
+.footer_inputs {
+    border: 2px solid #FAFAFA;
+    box-sizing: border-box;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 380px;
+    height: 61px;
+    background: transparent;
+    padding-left: 20px;
+    color: white;
+    font-size: 18px;
+}
+.footer_inputs::placeholder {
+  font-size: 20px;
+  line-height: 140%;
+  color: #808080;
+}
+#sub_form {
+    width: 161px;
+    grid-column: 4 / 5;
+    position: relative;
+    right: 23px;
+    height: 61px;
+    background: #FFAC22;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    line-height: 21px;
+    color: #0B0B0C;
+    cursor: pointer;
+}
+.push_me {
+  font-size: 14px;
+  grid-column: 4 / 5;
+  position: relative;
+  top: 110px;
+  left: 34px;
+  line-height: 140%;
+  text-decoration-line: underline;
+  color: #808080;
+  width: 204px;
+}
+.low_footer {
+  font-size: 18px;
+  line-height: 21px;
+  height: 45px;
+  position: relative;
+  top: 67px;
+  color: white;
+}
+.middle_footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 30% 30% 20% 20%;
+  grid-template-rows: repeat(3, 1fr);
+  height: 200px;
+}
+.post1 {
+    position: relative;
+    top: -25px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+.form_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  position: relative;
+  top: -35px;
+}
+.quest1 {
+  position: relative;
+  left: 22px;
+  top: -58px;
+}
+.quest2 {
+  position: relative;
+  right: 46px;
 }
 
