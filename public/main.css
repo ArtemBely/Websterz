@@ -487,3 +487,284 @@ body {
   right: 46px;
 }
 
+.wrap_login {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 93px;
+}
+.login_inside {
+  position: relative;
+  width: 667px;
+  height: 587px;
+  background: #232226;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_form {
+  position: relative;
+  top: 33px;
+  width: 367px;
+  height: 523px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.enter {
+  margin: 0;
+}
+.enter_to {
+  grid-column: 1 / 3;
+  font-family: 'Roboto-Bold';
+  display: flex;
+  font-weight: bold;
+  font-size: 30px !important;
+  line-height: 35px !important;
+  color: white;
+}
+.comm {
+  font-size: 20px;
+  line-height: 140%;
+  color: white;
+}
+.forgot_pass {
+  position: relative;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration-line: underline;
+  color: #808080;
+  left: -154px;
+  top: 43px;
+}
+#enter_but {
+  border: 2px solid #808080;
+  box-sizing: border-box;
+  border-radius: 7px;
+  width: 153px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: #808080;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  top: 24px;
+}
+.login_inp {
+  border: 2px solid #808080;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background: transparent;
+  width: 367px;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 20px;
+  line-height: 140%;
+  color: #808080;
+}
+.login_inp::placeholder {
+  font-size: 20px;
+  line-height: 140%;
+  color: #808080;
+}
+.radio_inp {
+  width: 12px;
+  left: -373px;
+  position: relative;
+  top: 85px;
+}
+.reg_but {
+    position: relative;
+    top: -40px;
+    left: 10px;
+}
+.no_acc {
+  position: relative;
+  top: -39px;
+}
+.your_email {
+  position: relative;
+  left: -367px;
+  top: 9px;
+  width: 200px;
+}
+.design_pass {
+  position: relative;
+  left: -368px;
+  top: 44px;
+}
+.inp_pass {
+  position: relative;
+  top: 36px;
+}
+.remember_me {
+  position: relative;
+  top: 41px;
+  left: 20px;
+}
+#reg_but2 {
+    border: 2px solid #808080;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 235px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #808080;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    top: 24px;
+}
+.wrap_reg {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 93px;
+}
+.data_of_user {
+  position: relative;
+  top: 35px;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 1180px;
+}
+.wrap_head_prof {
+  margin-top: -17px;
+}
+.profile {
+  position: relative;
+  width: 100%;
+}
+.wrap_data_of_user {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 185px;
+}
+.main_mail {
+  font-size: 30px;
+  line-height: 35px;
+  color: white;
+  font-family: 'Roboto-Bold';
+}
+.name_of_cred {
+  font-size: 20px;
+  line-height: 140%;
+  color: white;
+}
+.post_inside, .pass_inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #808080;
+  width: 280px;
+  height: 50px;
+  border: 2px solid #808080;
+  box-sizing: border-box;
+  border-radius: 7px;
+  font-size: 20px;
+  line-height: 140%;
+}
+.post_inside {
+  top: -29px;
+  position: relative;
+  left: -13px;
+}
+.wrap_postProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.wrap_passProfile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  position: relative;
+  top: -86px;
+}
+.check1_inside {
+  color: white;
+  mix-blend-mode: normal;
+  font-size: 18px;
+  line-height: 140%;
+  position: relative;
+  left: 25px;
+  top: -39px;
+  letter-spacing: 0.0357143em;
+}
+.wrap_check1 {
+  position: relative;
+  width: 322px;
+  left: 3px;
+  top: -22px;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.profile_scores {
+  font-size: 30px;
+  line-height: 35px;
+  font-family: 'Roboto-Bold';
+  grid-column: 3 / 4;
+  color: white;
+  text-align: end;
+  color: #FF7A00;
+  background-image: linear-gradient(
+-4deg, #FF9900, #FFD264);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.pass_inside {
+  position: relative;
+  top: -34px;
+  left: -13px;
+  font-size: 25px;
+  align-items: baseline;
+  padding-left: 16px;
+  justify-content: center;
+}
+#eye {
+  position: absolute;
+  left: 237px;
+  cursor: pointer;
+}
+#check1 {
+  opacity: 0;
+}
+.wrap_checkService {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #a0a0a0;
+  border-radius: 2px;
+}
+.forProfInp {
+  background: #a0a0a0;
+}
+
+

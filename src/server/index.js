@@ -1,6 +1,7 @@
 import React from 'react';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import App from '../components/App';
+//import Main from '../components/Main';
 import Routes from '../components/routes';
 import express from 'express';
 import { renderToString } from 'react-dom/server';
@@ -15,6 +16,7 @@ import flash from 'connect-flash';
 import cors from 'cors';
 
 import enterRouter from './routes/enter';
+import profileRouter from './routes/profile';
 
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
@@ -30,7 +32,7 @@ mongoose.connect(
     useCreateIndex: true
   },
   () => {
-    console.log('Connection with database rosee_admins completed');
+    console.log('Connection with database Websterz completed');
   }
 );
 
@@ -43,8 +45,6 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   next();
 });
-
-app.use('/enter', enterRouter);
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
@@ -62,6 +62,9 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use('/login', enterRouter);
+app.use('/profile', profileRouter);
 
 /*
 app.get('/', notLoggedIn, (req, res, next) => {
@@ -90,6 +93,7 @@ app.get('/', notLoggedIn, (req, res, next) => {
     );
 });
 */
+
 app.get('*', (req, res, next) => {
   const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};
   const promise = activeRouter.fetchInitialData ?
@@ -97,6 +101,7 @@ app.get('*', (req, res, next) => {
                   Promise.resolve()
   promise.then(data => {
     const context = { data };
+    const user = req.user;
     const markup = renderToString(
         <StaticRouter location={req.url} context={context}>
            <App data={data} />
@@ -112,7 +117,8 @@ app.get('*', (req, res, next) => {
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                       <script src='/bundle.js' defer></script>
                         <script>window.__INITIAL_DATA__= ${serialize(data)}</script>
-                            <title>COLLAB</title>
+                          <script>window.__INITIAL_USER__= ${serialize(user)}</script>
+                            <title>Websterz</title>
                           </head>
                         <body>
                        <div id="app">
@@ -133,7 +139,7 @@ function notLoggedIn(req, res, next) {
   res.redirect('/profile');
 }
 */
-/*
+
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -143,11 +149,11 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
-*/
+/*
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
 });
-
+*/
 app.listen(8080, () => {console.log('connected!')});

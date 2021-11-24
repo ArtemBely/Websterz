@@ -13,7 +13,7 @@ function Footer() {
                  <NavLink to='#' className='each_footer firstFoot'>Команда</NavLink>
                  <NavLink to='#' className='each_footer secondFoot'>Голосовать</NavLink>
                  <NavLink to='#' className='each_footer thirdFoot'>Контакты</NavLink>
-                 <NavLink to='#' className='each_footer'>Войти</NavLink>
+                 <NavLink to='/login' className='each_footer'>Войти</NavLink>
               </div>
               <div className='middle_footer'>
                  <p className='contact_us'>Связаться с нами</p>
