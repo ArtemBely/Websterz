@@ -139,7 +139,7 @@ function notLoggedIn(req, res, next) {
   res.redirect('/profile');
 }
 */
-
+/*
 app.use((error, req, res, next) => {
   res.status(error.status);
 
@@ -149,11 +149,11 @@ app.use((error, req, res, next) => {
     stack: error.stack
   });
 });
-/*
+*/
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
 });
-*/
+
 app.listen(8080, () => {console.log('connected!')});

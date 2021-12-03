@@ -1,0 +1,321 @@
+.kills {
+  position: relative;
+  height: 510px;
+  top: 125px;
+  width: 1180px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 15% 70%;
+}
+.kills2 {
+  position: relative;
+  height: 510px;
+  top: 438px;
+  width: 1180px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 15% 70%;
+}
+.wrap_gamers {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.everyGamer, .everyGamer2 {
+  display: grid;
+}
+.who_kill {
+  font-size: 30px;
+  line-height: 35px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto-Bold';
+  top: 44px;
+  position: relative;
+}
+.scores_kill {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  grid-column: 1 / 3;
+  top: 18px;
+  line-height: 23px;
+  color: #FFAC22;
+}
+.nick_of_gamer1, .nick_of_gamer2 {
+  font-size: 18px;
+  line-height: 140%;
+  font-family: 'Roboto-Bold';
+  color: white;
+}
+.name_of_gamer1 {
+  font-size: 18px;
+  line-height: 140%;
+  color: white;
+  position: relative;
+  top: -36px;
+}
+.everyGamer:hover > .common_kills_imgs {
+  border: 5px solid #FFAC22;
+}
+.everyGamer:hover > .nick_of_gamer1 {
+  color: #FFAC22;
+}
+.everyGamer:hover .wrap_gamers {
+  grid-gap: 17px;
+}
+
+.everyGamer2:hover > .common_kills_imgs2 {
+  border: 5px solid #FFAC22;
+}
+.everyGamer2:hover > .nick_of_gamer2 {
+  color: #FFAC22;
+}
+.everyGamer2:hover .wrap_gamers2 {
+  grid-gap: 17px;
+}
+.choosenGamer {
+  border: 5px solid #FFAC22;
+}
+.choosenGamerText {
+  color: #FFAC22;
+}
+.wrap_minutes {
+  position: relative;
+  width: 1180px;
+  display: flex;
+  justify-content: center;
+  top: 292px;
+}
+.wrap_allKills {
+  position: relative;
+  width: 1180px;
+  display: flex;
+  justify-content: center;
+  top: 406px;
+}
+.minutes {
+  width: 480px;
+  height: 150px;
+  position: relative;
+  left: -22px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.allKills {
+  position: relative;
+  left: -22px;
+}
+.min_during {
+  left: 18px;
+  top: -31px;
+}
+.kill_during {
+  left: 18px;
+  top: -10px;
+}
+#min_inp {
+  left: -163px;
+  top: -31px;
+}
+#kill_inp2 {
+  left: 288px;
+  top: -9px;
+}
+.wrap_send_vote {
+  width: 1180px;
+  display: flex;
+  justify-content: center;
+}
+#sent_result {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 50px;
+  position: relative;
+  width: 191px;
+  height: 61px;
+  font-size: 18px;
+  line-height: 21px;
+  color: black;
+  top: 613px;
+  background: #FFAC22;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.wrap_res_foot {
+  position: relative;
+  top: 540px;
+  height: 1px;
+}
+.wrap_start_game {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.start_game {
+  width: 1180px;
+  display: grid;
+  height: 517px;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 15% 25% 60%;
+}
+.choose_prof {
+  margin: 0;
+}
+.wrap_admin {
+  margin: 0;
+}
+.wrap_form_start {
+  position: relative;
+  top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form_start {
+  position: relative;
+  width: 1180px;
+}
+.wrap_start_game {
+  position: relative;
+  grid-template-columns: 1fr;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  width: 1180px;
+}
+.start_game_title {
+  font-family: 'Oswald-Bold';
+  color: white;
+  font-size: 50px;
+  line-height: 117.2%;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.final_game_title {
+  position: relative;
+  top: 32px;
+  font-family: 'Oswald-Bold';
+  color: white;
+  font-size: 50px;
+  line-height: 117.2%;
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.name_enemy_text {
+  font-size: 20px;
+  line-height: 120%;
+  color: white;
+  width: 127px;
+  grid-column: 1 / 2;
+  position: relative;
+  top: 3px;
+}
+.input_enemy_text, .input_short {
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #808080;
+  font-size: 20px;
+  line-height: 140%;
+  color: white;
+  font-family: 'Roboto-Regular';
+}
+.input_enemy_text {
+  width: 280px;
+  height: 50px;
+  padding-left: 20px;
+}
+.input_short {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+.input_enemy_text::placeholder {
+  font-size: 20px;
+  color: #808080;
+}
+.show_link {
+  color: white;
+  font-size: 18px;
+  line-height: 140%;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0357143em;
+  width: 217px;
+  grid-column: 3 / 4;
+  grid-row: 3 / 5;
+  position: relative;
+  left: 35px;
+  top: 28px;
+}
+.for_wrap_checkShow {
+  background: #FFAC22 !important;
+}
+.wrap_checkShow {
+  mix-blend-mode: normal;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  position: relative;
+  top: -11px;
+  left: -7px;
+  background: transparent;
+  border: #FFAC22 solid 1px;
+}
+#link_to_game {
+  top: -5px;
+  left: -2px;
+  position: relative;
+  border: none;
+  opacity: 0;
+}
+.scores_start_game {
+  width: 1180px;
+  display: grid;
+  height: 539px;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 15% 25% 60%;
+  position: relative;
+  top: -76px;
+}
+.start_button, .start_button_end {
+  display: flex;
+  grid-column: 1 / 2;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px 50px;
+  position: relative;
+  height: 60.66px;
+  background: #FFAC22;
+  border-radius: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  border: none;
+  top: 40px;
+  cursor: pointer;
+}
+.start_button {
+  width: 207px;
+}
+.start_button_end {
+  width: 240px;
+}
+.for_each_score {
+  top: 13px;
+  position: relative;
+  width: 600px;
+  font-size: 30px;
+  line-height: 35px;
+  font-family: 'Roboto-Bold';
+}
+#score_of_game {
+  position: relative;
+  top: 15px;
+}

@@ -1,0 +1,115 @@
+.final {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color: white;
+    grid-column: 1 / 2;
+    position: relative;
+    top: 11px;
+}
+.between1 {
+  font-size: 20px;
+  color: rgb(128, 128, 128);
+  position: relative;
+  grid-column: 2 / 3;
+  width: 10px;
+  top: 110px;
+  left: 70px;
+  height: 10px;
+}
+.input_short2 {
+      grid-column: 3 / 4;
+      position: relative;
+      left: -208px;
+      top: 0px;
+}
+.scores_final_game {
+  width: 1180px;
+  top: 0px;
+  display: grid;
+  height: 676px;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 15% 25% 60%;
+  position: relative;
+}
+.wrap_foot_admin {
+    position: relative;
+    height: 1px;
+    top: -368px;
+}
+.didChoise {
+  display: flex;
+  width: 221px;
+  height: 61px;
+  position: relative;
+  background: #808080;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21px;
+  top: -25px;
+  left: -29px;
+}
+.each_color_text {
+  font-size: 20px;
+  line-height: 23px;
+  color: #FF7A00 !important;
+    background-image: linear-gradient(
+-4deg, #FF9900, #FFD264);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.each_kill_block {
+  font-size: 20px;
+  line-height: 23px;
+  color: white;
+}
+.kill_block {
+  position: absolute;
+  left: 515px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 42px);
+  width: 665px;
+  top: 231px;
+  height: 76px;
+}
+.inside_game_window_prof {
+  position: relative;
+  width: 1180px;
+  height: 370px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.teamLogoSvg_prof2 {
+  position: relative;
+  left: 221px;
+  top: 39px;
+  grid-column: 2 / 3;
+}
+.vs_prof2 {
+    color: #FFAC22;
+    font-size: 50px;
+    line-height: 117%;
+    font-family: "Oswald-Regular";
+    grid-column: 3 / 4;
+    left: 65px;
+    position: relative;
+    top: -51px;
+}
+.enemy_prof2 {
+  font-size: 50px;
+  color: white;
+  position: relative;
+  left: -28px;
+  grid-column: 4 / 5;
+  top: -30px;
+}
+.score_prof {
+  font-size: 54.9306px;
+  line-height: 64px;
+  font-family: 'Roboto-Bold';
+  color: #FFFFFF;
+}

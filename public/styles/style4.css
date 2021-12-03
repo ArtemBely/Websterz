@@ -1,0 +1,275 @@
+.wrap_game_prof {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 780px;
+}
+.game_window_prof {
+  position: relative;
+  width: 1180px;
+  height: 370px;
+  border-radius: 30px;
+  top: 176px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: rgba(26, 26, 26, 0.8);
+  box-shadow: 0px 0px 33px #000000;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.for_window_game_prof {
+  position: relative;
+  left: 111px;
+  grid-column: 2 / 3;
+}
+.next_game_prof {
+  color: white;
+  text-shadow: 0px 20px 50px #000000;
+  font-size: 50px;
+  font-family: "Oswald-Bold";
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 19px;
+  z-index: 1;
+  grid-row: 2 / 3;
+  width: 330px;
+  height: 100px;
+  left: 79px;
+}
+.teamLogoSvg_prof {
+  position: relative;
+  left: 208px;
+  top: 85px;
+  grid-column: 2 / 3;
+}
+.vs_prof {
+  color: #FFAC22;
+  font-size: 50px;
+  line-height: 117%;
+  font-family: "Oswald-Regular";
+  grid-column: 3 / 4;
+  left: 65px;
+  position: relative;
+}
+.enemy_prof {
+  font-size: 50px;
+  color: white;
+  position: relative;
+  left: -28px;
+  grid-column: 4 / 5;
+}
+.do_choice_prof {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -173px;
+    left: -371px;
+}
+.wrap_present_prof {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 640px;
+  background: black;
+  top: -219px;
+}
+.votes_prof {
+  font-family: 'Oswald-Bold';
+  font-style: normal;
+  font-size: 50px;
+  position: relative;
+  top: 75px;
+  line-height: 117.2%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  height: 56px;
+}
+.wrap_footer_prof {
+  position: relative;
+  top: -318px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 3px;
+}
+.choice_inside_vote {
+  width: 556px;
+  height: 61px;
+  background: #FFAC22;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21px;
+}
+.date_of_game {
+    position: relative;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    color: white;
+    font-family: "Oswald-Bold";
+    font-size: 50px;
+    line-height: 117.2%;
+    left: -618px;
+    width: 763px;
+    top: 57px;
+    color: #FF7A00;
+    background-image: linear-gradient(
+    -4deg, #FF9900, #FFD264);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.next_game_vote {
+  color: white;
+  text-shadow: 0px 20px 50px #000000;
+  font-size: 50px;
+  font-family: "Oswald-Bold";
+  display: flex;
+  justify-content: left;
+  position: relative;
+  top: 49px;
+  z-index: 1;
+}
+.game_vote {
+  width: 1180px;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 60% 20%;
+  z-index: 1;
+  top: 0px;
+}
+.do_choice_vote {
+    position: relative;
+    top: -39px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    grid-column: 1 / 2;
+}
+.game_window_vote {
+  position: relative;
+  width: 1180px;
+  height: 370px;
+  background: rgba(11, 11, 12, 0.7);
+  box-shadow: 0px 0px 33px #000000;
+  backdrop-filter: blur(15px);
+  border-radius: 30px;
+  top: 43px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+#conf {
+  font-size: 18px;
+  line-height: 21px;
+  color: #808080;
+  text-align: center;
+  text-decoration-line: underline;
+  position: absolute;
+  top: 300px;
+  font-family: 'Roboto-Regular';
+}
+.wrap_results {
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  background: black;
+}
+.result_scores {
+  width: 780px;
+  height: 260px;
+  position: relative;
+  grid-template-columns: 30% 15% 5% 15% 30%;
+  display: grid;
+  justify-content: center;
+  left: 178px;
+  grid-template-rows: 20% 30% 50%;
+}
+.will_score {
+  position: relative;
+  left: 19px;
+  line-height: 35px;
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Roboto-Bold';
+  font-size: 30px;
+  line-height: 35px;
+}
+.scores_inp {
+  position: relative;
+  border: 2px solid #FFFFFF;
+  border-radius: 7px;
+  width: 109px;
+  height: 49px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 29px;
+  color: #FFAC22;
+  background: transparent;
+  top: 50px;
+  left: 19px;
+  text-align: center;
+}
+.scores_inp::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 25px;
+  line-height: 29px;
+}
+.vs2 {
+  position: relative;
+  left: 32px;
+  top: 42px;
+  color: white;
+  font-size: 54.9306px;
+  line-height: 64px;
+  width: 10px;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+.qty {
+  position: relative;
+  top: 13px;
+  left: -10px;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFAC22;
+  grid-column: 3 / 4;
+  width: 100px;
+  grid-row: 2 / 3;
+}
+.enemy2 {
+  font-size: 50px;
+  color: white;
+  position: relative;
+  left: 88px;
+  grid-column: 5 / 6;
+  grid-row: 3 / 4;
+}
+.logo_team {
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.scores_inp1 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  position: relative;
+}
+.scores_inp2 {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  position: relative;
+}

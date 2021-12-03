@@ -49,6 +49,7 @@ body {
 .header {
   position: relative;
   width: 1180px;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 52% repeat(4, 12%);
   background: #0B0B0C;

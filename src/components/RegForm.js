@@ -19,6 +19,8 @@ function RegForm() {
                         <input type='password' placeholder='●●●●●●●●●●●●●●' name='password' className='login_inp inp_pass' required/>
                         <input type='radio' className='login_inp radio_inp'/>
                         <input type='hidden' name='scores' value="0" />
+                        <input type='hidden' name='votation' value="" />
+                        <input type='hidden' name='arrayOfResults' value="" />
                       <span className='remember_me comm'>Запомнить меня</span>
                     <span className='forgot_pass' style={{ opacity: 0, zIndex: 0 }}>Забыли пароль?</span>
                   <button type='submit' id='reg_but2'>Зарегистрироваться</button>

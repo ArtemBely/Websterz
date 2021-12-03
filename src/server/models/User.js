@@ -6,7 +6,10 @@ const Schema = mongoose.Schema;
 const customer = new Schema({
   email: {type: String, required: true},
   password: {type: String, required: true},
-  scores: {type: String}
+  scores: {type: String},
+  admin: {type: String},
+  votation: {type: Array},
+  arrayOfResults: {type: Array}
 });
 
 module.exports = mongoose.model('Customer', customer);

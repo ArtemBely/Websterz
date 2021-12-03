@@ -1,5 +1,6 @@
 import React from 'react';
 import Enter from '../../components/Enter';
+import LoginAdmin from '../../components/LoginAdmin';
 import express from 'express';
 import passport from 'passport';
 import { renderToString } from 'react-dom/server';
@@ -44,9 +45,35 @@ router.get(['/', '/registration'], notLoggedIn, (req, res, next) => {
     res.send(html);
 });
 
-router.post('/registration', notLoggedIn, (req, res, done) => {
+router.get('/admin_router', notLoggedIn, (req, res, next) => {
+  var user = req.user;
+  const admin = renderToString(
+    <StaticRouter>
+      <LoginAdmin />
+    </StaticRouter>
+  );
+  const html =
+  `<!DOCTYPE html>
+    <html>
+        <head>
+          <title>Profile</title>
+               <link rel="stylesheet" type="text/css" href="../main.css">
+                 <meta name="viewport" content="width=device-width, initial-scale=1">
+              <script src='/bundle.js' defer></script>
+              <script>window.__INITIAL_USER__= ${serialize(user)}</script>
+        </head>
+        <body>
+             <div id="app">
+                 ${admin}
+             </div>
+        </body>
+    </html>`
+    res.send(html);
+});
+
+router.post(['/registration', '/admin_router'], notLoggedIn, (req, res, done) => {
   //console.log(req.body);
-  const { email, password, scores } = req.body;
+  const { email, password, scores, votation, arrayOfResults } = req.body;
   console.log(scores);
   req.checkBody("email", "Неверный формат email").isEmail().notEmpty();
   req.checkBody("password", "Минимальная длина пароля - 5 символов").isLength({ min: 5 }).notEmpty();
@@ -111,7 +138,11 @@ router.post('/registration', notLoggedIn, (req, res, done) => {
       var newUser = new User({
         email: email,
         password: password,
-        scores: scores
+        scores: scores,
+        admin: req.originalUrl == '/login/admin_router' ?
+                                  'true' : 'false',
+        votation: votation,
+        arrayOfResults: arrayOfResults
       });
 
      User.createUser(newUser, function(err, user) {
@@ -158,7 +189,7 @@ passport.use('local.signin', new LocalStrategy ({
  }
 
  if(!user) {
-   req.flash('errors', 'Не найдено пользователей или неверный пароль');
+   req.flash('errors', 'Не найдено пользователей');
    console.log('Не найдено пользователей. Ошибка в почте');
    return done(null, false);
  }
@@ -169,7 +200,7 @@ passport.use('local.signin', new LocalStrategy ({
        return done(null, user);
      }
      else {
-       req.flash('errors', 'Не найдено пользователей или неверный пароль');
+       req.flash('errors', 'неверный пароль');
        console.log('Неверный пароль');
        return done(null, false)
      }
