@@ -17,7 +17,7 @@ function RegForm() {
                         <input type='text' placeholder='email@site.com' name='email' className='login_inp' required/>
                         <p className='design_pass comm'>Пароль</p>
                         <input type='password' placeholder='●●●●●●●●●●●●●●' name='password' className='login_inp inp_pass' required/>
-                        <input type='radio' className='login_inp radio_inp'/>
+                        <input type='radio' className='radio_inp'/>
                         <input type='hidden' name='scores' value="0" />
                         <input type='hidden' name='votation' value="" />
                         <input type='hidden' name='arrayOfResults' value="" />

@@ -1,0 +1,505 @@
+@media (min-width: 320px) and (max-width: 578px) {
+  .header {
+    width: 320px;
+    grid-template-columns: 28% repeat(4, 1fr);
+  }
+  .header_link {
+    display: none;
+  }
+  .wrap_logo {
+    position: relative;
+    top: 8px;
+  }
+  .wrap_span {
+    display: grid;
+    width: 18px;
+    height: 55px;
+    grid-column: 6 / 7;
+    position: relative;
+    z-index: 1000;
+  }
+  .span_down {
+    position: relative;
+    top: -20px;
+  }
+  .appearUp {
+    top: 12px !important;
+    transform: rotate(
+    -45deg) !important;
+  }
+  .appearDown {
+    top: -22px !important;
+    transform: rotate(
+    45deg) !important;
+  }
+  .wrap_mobile_menu {
+    display: grid;
+    position: fixed;
+    width: 320px;
+    height: 400px;
+    background: #232226;
+    border-radius: 0px 10px 10px 10px;
+        transform: translateX(-500px);
+        transition: 0.3s;
+  }
+  .appearMenu {
+    transform: translateX(0px) !important;
+    left: 0px !important;
+  }
+  .mobile_menu {
+    display: grid;
+  }
+  .mobile_link {
+    font-size: 20px;
+    color: white;
+    padding-left: 33px;
+    padding-top: 30px;
+  }
+  .span_up {
+    position: relative;
+    top: 8px;
+  }
+  .each_span {
+    width: 18px;
+    height: 2px;
+    background: white;
+  }
+  .slider {
+    width: 320px;
+    height: 800px;
+  }
+  .teamTitle {
+    font-size: 30px;
+    line-height: 35px;
+    top: 14px;
+    left: 0;
+  }
+  #Pilguev {
+    position: relative;
+    top: 339px;
+    left: 87px;
+  }
+  .klydeep {
+    left: 127px !important;
+    top: -134px;
+  }
+  .pilguev {
+    left: 143px !important;
+    top: -149px;
+  }
+  #Re1GN1 {
+    left: 127px !important;
+    top: -133px;
+  }
+  #Re1GN2 {
+    left: 142px !important;
+    top: -148px;
+  }
+  .img_for_each_gamer {
+    width: 130px;
+  }
+  .gamers:nth-child(5) {
+    top: 252px;
+    left: 87px;
+  }
+  .remill {
+    top: -135px;
+    left: 127px !important;
+  }
+  .romanov {
+    top: -151px;
+    left: 143px !important;
+  }
+  .gamers:nth-child(4) {
+    right: 173px;
+    top: 8px;
+  }
+  .magnolia {
+    top: -133px;
+    left: 127px !important;
+  }
+  .rodnov {
+    top: -146px;
+    left: 142px !important;
+  }
+  .gamers:nth-child(2) {
+    top: 96px;
+    left: -43px;
+  }
+  .gamers:nth-child(3) {
+    right: 173px;
+    top: -24px;
+  }
+  .gamers:nth-child(6) {
+    left: -44px;
+    top: 376px;
+  }
+   {
+    top: -155px;
+    left: 140px !important;
+  }
+  .h1te {
+    top: -133px;
+    left: 128px !important;
+}
+  .khait {
+    top: -148px;
+    left: 144px !important;
+  }
+  .team {
+        width: 320px;
+  }
+.game {
+  width: 320px;
+  }
+  .wrap_gamers {
+    width: 320px;
+    box-shadow: inset 0px 0px 8px 54px black;
+    left: -61px;
+    top: 53px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrap_slider {
+    height: 530px;
+  }
+  .nicks {
+    left: 57px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .namesForNicks {
+        left: 57px;
+        font-size: 16px;
+        line-height: 22px;
+  }
+  .nickChill {
+    top: -132px !important;
+    left: 127px !important;
+  }
+  .nickChill2 {
+    left: 142px !important;
+    top: -147px !important;
+    width: 150px;
+  }
+  .wrap_nicks {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 86px;
+    top: 120px;
+    width: 260px;
+  }
+  .all_nicks {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .wrap_creds {
+    left: -98px;
+    width: 130px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    top: 9px;
+  }
+  .all_nicks:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    position: relative;
+    left: 43px;
+    top: 0px;
+  }
+  .spec_imgs {
+    position: relative;
+    top: 51px;
+  }
+  .all_nicks:nth-child(3) {
+    position: relative;
+    grid-column: 2 / 3;
+    left: 43px;
+    top: -41px;
+    grid-row: 2 / 3;
+    width: 100px;
+    height: 100px;
+  }
+  .nicks2 {
+    position: relative;
+    left: 100px;
+    top: -29px;
+  }
+  .namesForNicks2{
+    position: relative;
+    top: -44px;
+    left: 100px;
+  }
+  .next_game, .votes {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .votes {
+    top: 90px;
+    height: 40px;
+    width: 258px;
+    left: 33px;
+  }
+  .teamLogoSvg > img {
+        width: 74px;
+  }
+  .vs {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .wrap_game {
+    height: 505px;
+    top: 410px;
+  }
+  .next_game {
+    top: 48px;
+  }
+  .choice_inside {
+    top: -41px;
+    width: 212px;
+  }
+  .teamLogoSvg {
+    left: 19px;
+  }
+  .wrap_present {
+    top: 489px;
+  }
+  .bee {
+    width: 129px;
+  }
+  .enemy {
+        font-size: 19px;
+        color: white;
+        position: relative;
+        right: 25px;
+  }
+  .game_window {
+    width: 286px;
+    height: 186px;
+    top: 53px;
+    justify-self: center;
+  }
+  .present {
+        width: 320px;
+        top: -25px;
+        right: 0;
+  }
+  .each_wear {
+        width: 130px;
+        height: 199px;
+        background-repeat: round;
+        margin-left: 22px;
+        position: relative;
+        top: 34px;
+  }
+  .each_wear:nth-child(1):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(2):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(3):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(4):hover {
+    background-repeat: round;
+  }
+  .wrap_wear {
+    height: 345px;
+    left: -7px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .wrap_footer {
+    top: 540px;
+    height: 766px;
+  }
+  .footer {
+    width: 320px;
+  }
+  .high_footer {
+    top: 41px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 320px;
+    height: 60px;
+  }
+  .each_footer {
+    top: 39px;
+    left: -14px;
+  }
+  .secondFoot {
+    left: -87px;
+    top: 97px !important;
+  }
+  .enter_footer_link {
+    left: -97px;
+    top: 97px;
+  }
+  .thirdFoot {
+    left: -14px;
+}
+  #bee2 {
+        grid-column: 1 / 6;
+  }
+  .contact_us {
+    position: relative;
+    top: 6px;
+  }
+  .middle_footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 200px;
+    top: -35px;
+  }
+  .form_1 {
+        grid-template-columns: 1fr;
+  }
+  .push_me {
+    font-size: 14px;
+    grid-column: 1 / 2;
+    position: relative;
+    top: -18px;
+    left: 39px;
+    line-height: 140%;
+    text-decoration-line: underline;
+    color: #808080;
+    width: 245px;
+  }
+  #sub_form {
+        grid-column: 1 / 2;
+        right: 0;
+        top: 14px;
+        width: 320px;
+  }
+  .quest2 {
+    position: relative;
+    right: 0;
+    top: -12px;
+  }
+  .quest1 {
+    position: relative;
+    left: 0;
+    top: 0px;
+  }
+  .footer_inputs {
+    width: 320px;
+  }
+  .low_footer {
+    height: 18px;
+    top: 190px;
+    display: flex;
+    justify-content: center;
+  }
+  .header {
+    overflow: visible;
+  }
+  .enter_link {
+    width: 50px;
+  }
+  .all_nicks:nth-child(4) {
+    left: 0;
+    height: 100px;
+    top: -41px;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 144px;
+    height: 100px;
+  }
+  .header_link {
+    left: 62px;
+  }
+    .vote_header {
+      left: 45px;
+  }
+  .team_header {
+      left: 48px;
+  }
+  .login_inside {
+    width: 320px;
+    height: 460px;
+  }
+  .comm {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .enter_to {
+        font-size: 22px !important;
+        line-height: 26px !important;
+        width: 333px;
+        position: relative;
+        left: 21px;
+        margin-right: 0;
+        top: 25px;
+  }
+  .login_inp {
+    position: relative;
+    left: 20px;
+    top: 42px;
+    width: 281px;
+  }
+  #reg_but2 {
+    width: 224px;
+  }
+  .wrap_reg {
+    top: -18px;
+  }
+  .reg_but {
+    top: 0px;
+    left: 38px;
+  }
+  .no_acc {
+    top: 1px;
+    left: 20px;
+  }
+  .wrap_reg_foot {
+    height: 1px;
+    position: relative;
+    top: -580px;
+  }
+  .login_form {
+    overflow: hidden;
+    height: 523px;
+    top: 19px;
+  }
+  .remember_me {
+    position: relative;
+    top: 79px;
+    left: 47px;
+    width: 143px;
+    height: 40px;
+  }
+  .radio_inp {
+    width: 12px;
+    left: -266px;
+    position: relative;
+    top: 148px
+  }
+  #reg_but2 {
+    width: 224px;
+    left: 20px;
+    top: 60px;
+  }
+  .wrap_login {
+    top: -18px;
+  }
+  #enter_but {
+    left: 23px;
+    top: 61px;
+  }
+  .forgot_pass {
+    opacity: 0;
+  }
+  .your_email {
+    left: -262px;
+    top: 55px;
+    width: 200px;
+  }
+  .design_pass {
+    left: -262px;
+    top: 93px;
+  }
+  .inp_pass {
+        top: 80px !important;
+  }
+}

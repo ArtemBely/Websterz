@@ -7,6 +7,10 @@ import '../../public/styles/style3.css';
 import '../../public/styles/style4.css';
 import '../../public/styles/style5.css';
 import '../../public/styles/style6.css';
+import '../../public/styles/tablet992.css';
+import '../../public/styles/tablet768.css';
+import '../../public/styles/tablet576.css';
+import '../../public/styles/tablet320.css';
 
 class App extends React.Component {
   render() {

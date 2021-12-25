@@ -1,0 +1,205 @@
+@media (min-width: 994px) and (max-width: 1340px) {
+  .header {
+    width: 952px;
+  }
+  .wrap_reg_foot {
+    position: relative;
+    height: 1px;
+    top: 191px;
+  }
+  .slider {
+    width: 952px;
+    height: 890px;
+  }
+  .teamTitle {
+    font-size: 40px;
+    line-height: 47px;
+    top: -38px;
+    left: 0;
+  }
+  .img_for_each_gamer {
+    width: 226px;
+  }
+  .gamers:nth-child(5) {
+    right: 135px;
+    top: 103px;
+  }
+  .gamers:nth-child(4) {
+    right: 91px;
+    top: -95px;
+  }
+  .gamers:nth-child(2) {
+    top: 103px;
+    left: -44px;
+  }
+  .gamers:nth-child(3) {
+    right: 90px;
+  }
+  .gamers:nth-child(6) {
+    right: 180px;
+  }
+  .team {
+        width: 952px;
+        overflow: hidden;
+  }
+  .wrap_gamers {
+    width: 952px;
+  }
+  .nicks {
+    left: 57px;
+  }
+  .namesForNicks {
+        left: 57px;
+  }
+  .nickChill {
+    top: -217px !important;
+    left: 203px !important;
+  }
+  .nickChill2 {
+    left: 216px !important;
+    top: -237px !important;
+  }
+  .wrap_nicks {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    height: 86px;
+    top: -103px;
+  }
+  .wrap_creds {
+    left: 97px;
+    width: 130px;
+  }
+  .all_nicks:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    position: relative;
+    left: 18px;
+    top: 0px;
+  }
+  .all_nicks:nth-child(3) {
+    position: relative;
+    grid-column: 4 / 5;
+    grid-row: 1;
+    left: 0;
+    top: 0px;
+  }
+  .next_game, .votes {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  .votes {
+    top: 73px;
+    height: 40px;
+  }
+  .teamLogoSvg > img {
+        width: 149px;
+  }
+  .wrap_game {
+        height: 680px;
+        top: -93px;
+  }
+  .game_window {
+    width: 954px;
+    height: 300px;
+    justify-self: center;
+  }
+  .present {
+        width: 954px;
+        top: -25px;
+        right: 0;
+  }
+  .each_wear {
+    width: 235px;
+    height: 346px;
+        background-repeat: round;
+  }
+  .each_wear:nth-child(1):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(2):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(3):hover {
+    background-repeat: round;
+  }
+  .each_wear:nth-child(4):hover {
+    background-repeat: round;
+  }
+  .wrap_wear {
+    height: 345px;
+  }
+  .wrap_footer {
+    top: 5px;
+    height: 620px;
+  }
+  .footer {
+    width: 954px;
+  }
+  .high_footer {
+    top: 41px;
+    display: grid;
+    grid-template-columns: 60% repeat(4, 1fr);
+    width: 954px;
+    height: 60px;
+  }
+  .middle_footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 200px;
+    top: -91px;
+  }
+  .form_1 {
+        grid-template-columns: 1fr;
+  }
+  .push_me {
+    font-size: 14px;
+    grid-column: 1 / 2;
+    position: relative;
+    top: -85px;
+    left: 185px;
+    line-height: 140%;
+    text-decoration-line: underline;
+    color: #808080;
+    width: 245px;
+  }
+  #sub_form {
+        grid-column: 1 / 2;
+        right: 0;
+        top: 14px;
+  }
+  .quest2 {
+    position: relative;
+    right: 0;
+    top: -4px;
+  }
+  .quest1 {
+    position: relative;
+    left: 0;
+    top: 7px;
+  }
+  .footer_inputs {
+    width: 456px;
+  }
+  .low_footer {
+        height: 18px;
+        top: 158px;
+  }
+  .header {
+    overflow: visible;
+  }
+  .enter_link {
+    width: 50px;
+  }
+  .all_nicks:nth-child(4) {
+    left: 36px;
+  }
+  .header_link {
+    left: 62px;
+  }
+  .vote_header {
+    left: 45px;
+}
+.team_header {
+    left: 48px;
+}
+}

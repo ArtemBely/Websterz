@@ -19,47 +19,47 @@ class Team extends React.Component {
           <div className='team'>
               <p className='teamTitle'>КОМАНДА</p>
                  <div className='wrap_gamers'>
-                      <div className='gamers'>
-                          <img src={gamer1} />
-                          <p className='nicks'>klydeep</p>
-                          <p className='namesForNicks'>Arsenii Pilguev</p>
+                      <div className='gamers' id='Pilguev'>
+                          <img src={gamer1} className='img_for_each_gamer'/>
+                          <p className='nicks klydeep'>klydeep</p>
+                          <p className='namesForNicks pilguev'>Arsenii Pilguev</p>
                       </div>
                       <div className='gamers'>
-                          <img src={gamer2} />
-                          <p className='nicks'>Re1GN</p>
-                          <p className='namesForNicks'>Daniil Chekanin</p>
+                          <img src={gamer2} className='img_for_each_gamer'/>
+                          <p className='nicks re1GN' id='Re1GN1'>Re1GN</p>
+                          <p className='namesForNicks Chekanin' id='Re1GN2'>Daniil Chekanin</p>
                       </div>
                       <div className='gamers'>
-                          <img src={gamer3} />
+                          <img src={gamer3} className='img_for_each_gamer'/>
                           <p className='nicks nickChill'>Chill</p>
                           <p className='namesForNicks nickChill2'>Artsiom Mankevich</p>
                       </div>
                       <div className='gamers'>
-                          <img src={gamer4} />
-                          <p className='nicks'>Magnolia</p>
-                          <p className='namesForNicks'>Kirill Rodnov</p>
+                          <img src={gamer4} className='img_for_each_gamer'/>
+                          <p className='nicks magnolia'>Magnolia</p>
+                          <p className='namesForNicks rodnov'>Kirill Rodnov</p>
                       </div>
                       <div className='gamers'>
-                          <img src={gamer5} />
-                          <p className='nicks'>Remill</p>
-                          <p className='namesForNicks'>Andrey Romanov</p>
+                          <img src={gamer5} className='img_for_each_gamer'/>
+                          <p className='nicks remill'>Remill</p>
+                          <p className='namesForNicks romanov'>Andrey Romanov</p>
                       </div>
                       <div className='gamers'>
-                          <img src={gamer6} />
-                          <p className='nicks'>h1te</p>
-                          <p className='namesForNicks'>Vladislav Khait</p>
+                          <img src={gamer6} className='img_for_each_gamer'/>
+                          <p className='nicks h1te'>h1te</p>
+                          <p className='namesForNicks khait'>Vladislav Khait</p>
                       </div>
                 </div>
                 <div className='wrap_nicks'>
                       <div className='all_nicks'>
-                          <img src={nick1} />
+                          <img src={nick1} className='spec_imgs'/>
                           <p className='wrap_creds'>
                               <p className='nicks2'>Nickname</p>
                               <p className='namesForNicks2'>Name Surname</p>
                           </p>
                       </div>
                       <div className='all_nicks'>
-                          <img src={nick2} />
+                          <img src={nick2} className='spec_imgs'/>
                           <p className='wrap_creds'>
                               <p className='nicks2'>Nickname</p>
                               <p className='namesForNicks2'>Name Surname</p>

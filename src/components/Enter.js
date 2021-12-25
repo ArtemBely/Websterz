@@ -12,7 +12,7 @@ class Enter extends React.Component{
           <Header />
             <Route exact path='/login' component={Login} />
             <Route exact path={['/login/registration', '/registration']} component={RegForm} />
-          <Footer />
+          <p className='wrap_reg_foot'><Footer /></p>
       </p>
     )
   }

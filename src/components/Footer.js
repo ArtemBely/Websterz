@@ -24,12 +24,12 @@ render() {
     <div className='wrap_footer'>
         <div className='footer'>
             <div className='high_footer'>
-               <img src={bee} id='bee2'/>
+               <img src={bee} id='bee2' className='bee'/>
                <NavLink to='#' className='each_footer firstFoot'>Команда</NavLink>
                <NavLink to='#' className='each_footer secondFoot'>Голосовать</NavLink>
                <NavLink to='#' className='each_footer thirdFoot'>Контакты</NavLink>
                <a href={this.state.user ? '/profile/logout' :
-               '/login'} className='each_footer'>
+               '/login'} className='each_footer enter_footer_link'>
                {this.state.user ? "Выйти" : "Войти"}
                </a>
             </div>
