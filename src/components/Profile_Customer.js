@@ -90,7 +90,7 @@ class Profile extends React.Component{
     }
     else {
       return (
-        <NavLink to='/profile/vote' className='choice_inside'>Сделать свой выбор</NavLink>
+        <NavLink to='/profile/vote' className='choice_inside2'>Сделать свой выбор</NavLink>
       )
     }
   }
@@ -99,7 +99,7 @@ class Profile extends React.Component{
     if(this.state.user && typeof this.state.user.votation[0] == 'object') {
       return (
         <div className='inside_game_window_prof'>
-             <p className='for_window_game_prof teamLogoSvg_prof2'><img src={teamLogo} /></p>
+             <p className='for_window_game_prof teamLogoSvg_prof2'><img src={teamLogo} className='teamLogo2 teamLogoSvg_prof2_img'/></p>
                <p className='vs_prof2 for_window_game'>
                  <span className='score_prof'>{this.state.user.votation[0].score1}&nbsp;</span>
                  <span className='score_prof'>:</span>
@@ -118,13 +118,31 @@ class Profile extends React.Component{
     else {
       return (
         <div className='inside_game_window_prof'>
-             <p className='for_window_game_prof teamLogoSvg_prof'><img src={teamLogo} /></p>
+             <p className='for_window_game_prof teamLogoSvg_prof'><img src={teamLogo} className='teamLogo2'/></p>
                <p className='vs_prof for_window_game'>VS</p>
                {this.actualEnemyNameProfile2()}
         </div>
       )
     }
   }
+
+  scanGame = () => {
+    if(this.state.user && typeof this.state.user.votation[0] == 'object') {
+      return(
+        <div className='game_window_prof_voted'>
+            {this.firstKill()}
+         </div>
+      )
+    }
+    else {
+      return(
+        <div className='game_window_prof'>
+            {this.firstKill()}
+         </div>
+      )
+    }
+  }
+
 
   render() {
     return(
@@ -138,15 +156,16 @@ class Profile extends React.Component{
           <div className='wrap_game_prof'>
               <div className='game'>
                   <p className='next_game_prof'>ПРЕДСТОЯЩИЙ МАТЧ</p>
-                     <div className='game_window_prof'>
-                         {this.firstKill()}
-                      </div>
+                     {this.scanGame()}
                      <div className='do_choice_prof'>
                    {this.didChoise()}
                 </div>
               </div>
           </div>
-          <div className='wrap_present_prof'>
+
+          <div className={this.state.user && typeof this.state.user.votation[0] == 'object'
+          ?  'wrap_present_prof_choosen'
+          :  'wrap_present_prof'}>
               <div className='present'>
                   <div className='votes_prof'>ПОТРАТИТЬ БАЛЛЫ</div>
                   <div className='wrap_wear'>
@@ -157,7 +176,10 @@ class Profile extends React.Component{
                   </div>
               </div>
           </div>
-          <div className='wrap_footer_prof'><Footer /></div>
+
+          <div className={this.state.user && typeof this.state.user.votation[0] == 'object'
+          ?  'wrap_footer_prof_choosen'
+          :  'wrap_footer_prof'}><Footer /></div>
       </p>
     )
   }

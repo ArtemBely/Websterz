@@ -1,0 +1,155 @@
+@media (min-width: 994px) and (max-width: 1340px) {
+  .data_of_user, .inside_game_window_prof, .wrap_start_game,
+  .scores_start_game, .form_start, .scores_final_game {
+    width: 954px;
+  }
+  .next_game_prof, .start_game_title, .final_game_title {
+    font-size: 40px;
+  }
+  .game_window_prof, .game, .game_window_prof_voted, .start_game {
+        width: 954px;
+  }
+  .game_window_prof, .game_window_prof_voted {
+    height: 290px;
+  }
+  .show_link {
+    left: 139px;
+  }
+  .wrap_foot_admin {
+        top: -178px;
+  }
+  .input_short {
+    position: relative;
+    left: 42px;
+  }
+  .input_short2 {
+    left: -112px;
+  }
+  .between1 {
+    left: 111px;
+  }
+  .for_each_score {
+    font-size: 30px;
+  }
+  .input_enemy_text {
+    position: relative;
+    left: 42px;
+  }
+
+  .choice_inside2 {
+    top: -96px;
+    width: 250px;
+    left: 98px;
+  }
+  .vs_prof2 {
+    left: 44px;
+    position: relative;
+    top: -93px;
+  }
+  .teamLogoSvg_prof2 > img {
+    width: 118px;
+  }
+  .teamLogoSvg_prof2 {
+    left: 161px;
+    top: 18px;
+  }
+  .kill_block {
+    left: 373px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 32px);
+    width: 577px;
+    top: 173px;
+    height: 42px;
+  }
+  .didChoise {
+    top: -91px;
+    left: 52px;
+    width: 159px;
+  }
+  .each_kill_block {
+        font-size: 18px;
+  }
+
+  .score_prof {
+    font-size: 44px;
+  }
+  .next_game_vote, .date_of_game {
+    font-size: 40px;
+  }
+  .teamLogo2 {
+    width: 154px;
+  }
+  .teamLogoSvg_prof {
+    top: 52px;
+  }
+  .vs_prof {
+    left: 93px;
+    position: relative;
+    top: -41px;
+  }
+
+  .game_vote, .kills, .kills2, .game_window_vote {
+    width: 954px;
+  }
+  .kills {
+    left: 116px;
+  }
+  .game_window_vote {
+    height: 285px;
+  }
+  .teamLogoSvg {
+    left: 0px;
+  }
+  .wrap_results {
+    top: 125px;
+    left: -100px;
+  }
+  .wrap_minutes {
+    top: 221px;
+    left: 104px;
+    width: 954px;
+  }
+  .wrap_allKills {
+    top: 357px;
+    left: 104px;
+    width: 954px;
+  }
+  .wrap_game {
+    top: 29px;
+  }
+  .date_of_game {
+    width: 507px;
+    left: -495px;
+  }
+  .everyGamer, .everyGamer2 {
+        height: 250px;
+  }
+  .common_kills_imgs, .common_kills_imgs2 {
+    width: 171px;
+  }
+  #sent_result {
+    top: 518px;
+        left: 102px;
+  }
+  .wrap_res_foot {
+        top: 770px;
+  }
+  .allKills {
+    position: relative;
+    left: -22px;
+}
+  .kills2 {
+    top: 427px;
+    left: 110px;
+  }
+  #teamLogo3 {
+    width: 150px;
+  }
+  .wrap_send_vote {
+        width: 954px;
+  }
+  .wrap_gamers {
+        width: 952px;
+  }
+}

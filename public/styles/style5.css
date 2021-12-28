@@ -16,7 +16,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 15% 15% 70%;
 }
-.wrap_gamers {
+.wrap_gamers, .wrap_gamers3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }

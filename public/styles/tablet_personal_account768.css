@@ -1,0 +1,231 @@
+@media (min-width: 768px) and (max-width: 994px) {
+  .data_of_user, .inside_game_window_prof, .wrap_start_game,
+  .scores_start_game, .form_start, .scores_final_game,
+  .game_window_prof, .game, .game_window_prof_voted, .start_game {
+    width: 768px;
+  }
+  .main_mail {
+    left: -350px;
+  }
+
+  .show_link {
+    left: 204px;
+  }
+  .wrap_foot_admin {
+        top: -178px;
+  }
+  .start_game_title, .final_game_title {
+    font-size: 38px;
+  }
+  .input_short {
+    position: relative;
+    left: 58px;
+  }
+  .input_short2 {
+    left: -44px;
+  }
+  .between1 {
+    left: 129px;
+  }
+  .for_each_score {
+    font-size: 28px;
+  }
+  .input_enemy_text {
+    position: relative;
+    left: 58px;
+  }
+
+  .choice_inside2 {
+    top: -96px;
+    width: 250px;
+    left: 98px;
+  }
+  .vs_prof2 {
+    left: 66px;
+    position: relative;
+    top: -108px;
+  }
+  .teamLogoSvg_prof2 > img {
+    width: 87px;
+  }
+  .teamLogoSvg_prof2 {
+    left: 182px;
+    top: 18px;
+  }
+  .score_prof {
+    font-size: 38px;
+  }
+  .kill_block {
+    left: 373px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 61px);
+    width: 349px;
+    top: 129px;
+    height: 42px;
+        grid-gap: 0px 47px;
+  }
+  .didChoise {
+    top: -91px;
+    left: 156px;
+    width: 181px;
+  }
+  .each_kill_block {
+        font-size: 16px;
+        width: 150px;
+  }
+  .each_color_text {
+    left: -5px;
+    position: relative;
+  }
+  .profile_scores {
+    left: 238px;
+    top: -240px;
+  }
+  .enemy_prof2 {
+    left: 7px;
+    top: -108px;
+  }
+  .votes_prof {
+    font-size: 38px;
+  }
+  .profile_scores, .main_mail {
+    font-size: 28px;
+    grid-column: 2 / 3;
+    width: 159px;
+    position: relative;
+  }
+  .wrap_footer_prof, .wrap_footer_prof_choosen {
+    top: -442px;
+  }
+  .pass_inside, .post_inside {
+    left: 33px;
+  }
+  .next_game_prof {
+    font-size: 38px;
+  }
+  .game_window_prof, .game, .game_window_prof_voted {
+        width: 768px;
+  }
+  .game_window_prof, .game_window_prof_voted {
+    height: 290px;
+  }
+  .wrap_check1 {
+    width: 289px;
+    left: 86px;
+  }
+  .choice_inside2 {
+    top: -96px;
+    width: 217px;
+    left: 174px;
+  }
+  .teamLogo2 {
+    width: 104px;
+  }
+  .teamLogoSvg_prof {
+    top: 82px;
+  }
+  .vs_prof {
+    left: 93px;
+    position: relative;
+    top: -41px;
+  }
+
+  .game_vote, .kills, .kills2, .game_window_vote {
+    width: 768px;
+  }
+  .do_choice_vote {
+    top: 33px;
+  }
+  .kills {
+    left: 116px;
+  }
+  .will_score {
+    font-size: 28px;
+  }
+  #conf {
+    top: 283px;
+  }
+  .game_window_vote {
+    height: 285px;
+    height: 341px;
+    top: 100px;
+    width: 746px;
+  }
+  .teamLogoSvg {
+    left: 0px;
+  }
+  .wrap_results {
+    top: 170px;
+    left: -100px;
+  }
+  .wrap_minutes {
+    top: 675px;
+    left: 104px;
+    width: 768px;
+  }
+  .enemy2 {
+    left: 0px;
+  }
+  .wrap_allKills {
+    top: 833px;
+    left: 104px;
+    width: 768px;
+  }
+  .wrap_game {
+    top: 29px;
+  }
+  .date_of_game {
+    width: 507px;
+    left: -748px;
+    top: 126px;
+  }
+  .everyGamer, .everyGamer2 {
+        height: 250px;
+  }
+  .common_kills_imgs, .common_kills_imgs2 {
+    width: 221px;
+  }
+  .result_scores {
+    left: 92px;
+  }
+  .kills {
+    top: 92px;
+  }
+  #sent_result {
+    top: 1525px;
+        left: 102px;
+  }
+  .wrap_res_foot {
+        top: 1745px;
+  }
+  .allKills {
+    position: relative;
+    left: -22px;
+}
+  .kills2 {
+    top: 889px;
+    left: 110px;
+  }
+  .next_game_vote, .date_of_game {
+    font-size: 38px;
+  }
+  #teamLogo3 {
+    width: 150px;
+  }
+  #kill_inp2 {
+    left: 266px;
+  }
+  .wrap_gamers3_down {
+    top: 5px;
+    position: relative;
+  }
+  .wrap_send_vote {
+        width: 768px;
+  }
+  .wrap_gamers3 {
+        width: 768px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 168px 0px;
+  }
+}

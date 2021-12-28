@@ -39,7 +39,7 @@ class Vote extends React.Component{
     return(
       <p className='wrap_profile'>
         <div className='wrap_head_prof'><Header /></div>
-          <div className='wrap_game'>
+          <div className='wrap_game baby_game'>
               <div className='game_vote'>
                   <p className='next_game_vote'>ДО НАЧАЛА МАТЧА</p>
                    <p className='date_of_game'>
@@ -51,7 +51,11 @@ class Vote extends React.Component{
                          {this.actualEnemyNameVote()}
                       </div>
                      <div className='do_choice_vote'>
-                   <p className='choice_inside_vote'>Дать прогноз и получить баллы за правильный ответ</p>
+                   <p className='choice_inside_vote' style={{
+                     width: typeof window !== "undefined" && window.screen.width > 1320 ? '556px' : '275px'
+                   }}>{typeof window !== "undefined" && window.screen.width > 1320 ?
+                   'Дать прогноз и получить баллы за правильный ответ' :
+                   'Сделать свой выбор'}</p>
                 </div>
               </div>
           </div>

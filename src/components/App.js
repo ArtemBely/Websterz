@@ -11,6 +11,10 @@ import '../../public/styles/tablet992.css';
 import '../../public/styles/tablet768.css';
 import '../../public/styles/tablet576.css';
 import '../../public/styles/tablet320.css';
+import '../../public/styles/tablet_personal_account992.css';
+import '../../public/styles/tablet_personal_account768.css';
+import '../../public/styles/tablet_personal_account576.css';
+import '../../public/styles/tablet_personal_account320.css';
 
 class App extends React.Component {
   render() {

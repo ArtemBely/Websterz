@@ -57,7 +57,6 @@ body {
   display: grid;
   grid-template-columns: 52% repeat(4, 12%);
   background: #0B0B0C;
-  overflow: hidden;
 }
 .header_link {
     display: flex;
@@ -141,7 +140,7 @@ body {
   position: relative;
   top: -17px;
 }
-.wrap_gamers {
+.wrap_gamers, .wrap_gamers2 {
   position: relative;
   display: grid;
   width: 1180px;

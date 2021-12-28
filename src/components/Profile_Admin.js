@@ -62,15 +62,15 @@ class Admin extends React.Component{
                    <div className='scores_start_game'>
                       <p className='start_game_title for_each_score'>Расстановка баллов</p>
                           <span className='name_enemy_text' id='score_of_game'>Счёт игры</span>
-                          <input type='text' name='scoresOfGame' className='input_enemy_text' placeholder='15 баллов' required/>
-                          <span className='name_enemy_text'>Совершил первый килл</span>
-                          <input type='text' name='firstKillOfGame' className='input_enemy_text' placeholder='15 баллов' required/>
-                          <span className='name_enemy_text'>Длительность игры</span>
-                          <input type='text' name='timeOfGame' className='input_enemy_text' placeholder='15 баллов' required/>
-                          <span className='name_enemy_text'>Киллов у команды</span>
-                          <input type='text' name='killsOfTeam' className='input_enemy_text' placeholder='15 баллов' required/>
-                          <span className='name_enemy_text'>Показатель КД</span>
-                          <input type='text' name='kdOfTeam' className='input_enemy_text' placeholder='15 баллов' required/>
+                          <input type='text' name='scoresOfGame' className='input_enemy_text down_input2' placeholder='15 баллов' required/>
+                          <span className='name_enemy_text kill_down2'>Совершил первый килл</span>
+                          <input type='text' name='firstKillOfGame' className='input_enemy_text down_input2' placeholder='15 баллов' required/>
+                          <span className='name_enemy_text kill_down2'>Длительность игры</span>
+                          <input type='text' name='timeOfGame' className='input_enemy_text down_input2' placeholder='15 баллов' required/>
+                          <span className='name_enemy_text kill_down2'>Киллов у команды</span>
+                          <input type='text' name='killsOfTeam' className='input_enemy_text down_input2' placeholder='15 баллов' required/>
+                          <span className='name_enemy_text kill_down2'>Показатель КД</span>
+                          <input type='text' name='kdOfTeam' className='input_enemy_text down_input2' placeholder='15 баллов' required/>
                         <button type='submit' className='start_button'>Начать матч</button>
                    </div>
             </form>
@@ -81,16 +81,16 @@ class Admin extends React.Component{
                           <span className='name_enemy_text' id='score_of_game' style={{
                             gridRow: '3/4'
                           }}>Счёт игры</span>
-                          <input type='text' name='scores_final' className='input_short' placeholder='30'/><span className='between1'>:</span>
-                          <input type='text' name='scores_final2' className='input_short input_short2' placeholder='15'/>
-                          <span className='name_enemy_text'>Совершил первый килл</span>
-                          <input type='text' name='kill_final' className='input_enemy_text' placeholder='Выбрать игрока'/>
-                          <span className='name_enemy_text'>Длительность игры</span>
-                          <input type='text' name='time_final' className='input_enemy_text' placeholder='85 минут'/>
-                          <span className='name_enemy_text'>Киллов у команды</span>
-                          <input type='text' name='team_kill_final' className='input_enemy_text' placeholder='144'/>
-                          <span className='name_enemy_text'>Показатель КД</span>
-                          <input type='text' name='kd_final' className='input_enemy_text' placeholder='Выбрать игрока'/>
+                          <input type='text' name='scores_final' className='input_short down_input2' placeholder='30'/><span className='between1'>:</span>
+                          <input type='text' name='scores_final2' className='input_short input_short2 down_input2' placeholder='15'/>
+                          <span className='name_enemy_text kill_down2'>Совершил первый килл</span>
+                          <input type='text' name='kill_final' className='input_enemy_text down_input2' placeholder='Выбрать игрока'/>
+                          <span className='name_enemy_text kill_down2'>Длительность игры</span>
+                          <input type='text' name='time_final' className='input_enemy_text down_input2' placeholder='85 минут'/>
+                          <span className='name_enemy_text kill_down2'>Киллов у команды</span>
+                          <input type='text' name='team_kill_final' className='input_enemy_text down_input2' placeholder='144'/>
+                          <span className='name_enemy_text kill_down2'>Показатель КД</span>
+                          <input type='text' name='kd_final' className='input_enemy_text down_input2' placeholder='Выбрать игрока'/>
                           {this.idOfActualGame()}
                         <button type='submit' className='start_button_end'>Завершить матч</button>
                    </div>

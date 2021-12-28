@@ -169,7 +169,7 @@
   .wrap_team {
     overflow: hidden;
   }
-  .wrap_gamers {
+  .wrap_gamers, .wrap_gamers3 {
     width: 576px;
     left: -61px;
     top: 53px;
