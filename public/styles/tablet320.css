@@ -6,9 +6,34 @@
   .header_link {
     display: none;
   }
+  #down_arrow {
+    position: relative;
+    left: -266px;
+    top: 166px;
+}
+#file_img {
+    position: absolute;
+    width: 295px;
+}
+.wrap_black_screen, .wrap_star3, .wrap_star2 {
+  display: none;
+}
+.wrap_vector {
+  display: none;
+}
   .wrap_logo {
     position: relative;
     top: 8px;
+  }
+  .each_down_slide > img {
+        width: 151px;
+  }
+  .down_sliders {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0px 18px;
+  }
+  .wrap_active_sliders {
+    height: 472px;
   }
   .wrap_span {
     display: grid;
@@ -160,7 +185,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .wrap_slider {
-    height: 530px;
+    height: 930px;
   }
   .nicks {
     left: 57px;
@@ -271,7 +296,7 @@
         font-size: 19px;
         color: white;
         position: relative;
-        right: 25px;
+        right: -3px;
   }
   .game_window {
     width: 286px;

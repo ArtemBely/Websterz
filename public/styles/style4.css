@@ -116,7 +116,7 @@
     font-size: 50px;
     line-height: 117.2%;
     left: -618px;
-    width: 763px;
+    width: 682px;
     top: 57px;
     color: #FF7A00;
     background-image: linear-gradient(
@@ -192,6 +192,7 @@
   justify-content: center;
   left: 178px;
   grid-template-rows: 20% 30% 50%;
+  z-index: 5;
 }
 .will_score {
   position: relative;
@@ -247,7 +248,7 @@
   line-height: 23px;
   color: #FFAC22;
   grid-column: 3 / 4;
-  width: 100px;
+  width: 111px;
   grid-row: 2 / 3;
 }
 .enemy2 {

@@ -6,7 +6,7 @@ const newGame = new Schema({
   nameOfEnemy: {type: String, required: true},
   logoOfEnemy: {type: String, required: true},
   linkToGame: {type: String, required: true},
-  startOfGame: {type: String, required: true},
+  startOfGame: {type: Date, required: true},
   scoresOfGame: {type: String, required: true},
   firstKillOfGame: {type: String, required: true},
   timeOfGame: {type: String, required: true},

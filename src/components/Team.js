@@ -10,15 +10,17 @@ import nick1 from '../../public/images/unsplash_KIPqvvTOC1s.svg';
 import nick2 from '../../public/images/unsplash_RxiAV5LC-ww.svg';
 import nick3 from '../../public/images/unsplash_6GgCyNnF6Zs.svg';
 import nick4 from '../../public/images/unsplash_a19OVaa2rzA.svg';
+import star1 from '../../public/images/Star-36.svg';
 
 class Team extends React.Component {
 
   render() {
     return (
       <div className='wrap_team'>
+        {/*<p className='wrap_star1'><img src={star1} /></p>*/}
           <div className='team'>
-              <p className='teamTitle'>КОМАНДА</p>
-                 <div className='wrap_gamers'>
+              <p className='teamTitle' id='team_link'>КОМАНДА</p>
+                 <div className='wrap_gamers' id='wr_gamers1'>
                       <div className='gamers' id='Pilguev'>
                           <img src={gamer1} className='img_for_each_gamer'/>
                           <p className='nicks klydeep'>klydeep</p>
@@ -50,7 +52,7 @@ class Team extends React.Component {
                           <p className='namesForNicks khait'>Vladislav Khait</p>
                       </div>
                 </div>
-                <div className='wrap_nicks'>
+                <div className='wrap_nicks' id='wr_nicks1'>
                       <div className='all_nicks'>
                           <img src={nick1} className='spec_imgs'/>
                           <p className='wrap_creds'>

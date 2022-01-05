@@ -8,7 +8,43 @@ import express from 'express';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import serialize from 'serialize-javascript';
+import multer from 'multer';
+import multerS3 from 'multer-s3';
+import aws from 'aws-sdk';
 const router = express.Router();
+
+require('dotenv/config');
+
+aws.config.update({
+  secretAccessKey: process.env.s3_secretAccessKey,
+  accessKeyId: process.env.s3_accessKeyId,
+  region: process.env.s3_bucketRegion
+});
+
+const s3 = new aws.S3();
+
+const fileFilter = (req, file, cb) => {
+  if( file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetipe === 'image/svg') {
+    cb(null, true);
+  }
+  else  { cb(null, false); }
+};
+
+var upload = multer({
+  fileFilter: fileFilter,
+  limits:{ fileSize: 5000000 },
+  storage: multerS3({
+    s3: s3,
+    bucket: 'websterzgbn',
+    //acl: 'public-read',  // --> требуются настройки доступа в aws s3, чтобы использовать данный параметр
+    metadata: function (req, file, cb) {
+      cb(null, {fieldName: file.fieldname});
+    },
+    key: function (req, file, cb) {
+      cb(null, Date.now().toString())
+    }
+  })
+});
 
 router.get('/', isLoggedIn, async (req, res, next) => {
   var user = req.user;
@@ -34,7 +70,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
 
           var finalScores = 0;
           user.votation[0].score1 == exactGame[0].scores_final &&
-          user.votation[0].score2 == exactGame[0].scores_final ?
+          user.votation[0].score2 == exactGame[0].scores_final2 ?
           finalScores += parseInt(actualScoreGame[0].scoresOfGame) : finalScores += 0;
 
           user.votation[0].firstKill == exactGame[0].kill_final ?
@@ -115,12 +151,13 @@ router.get('/vote', isLoggedIn, async (req, res, next) => {
     res.send(html);
 });
 
-router.post('/start_game', isLoggedIn, async (req, res, next) => {
-   var { nameOfEnemy, logoOfEnemy, linkToGame, startOfGame, scoresOfGame,
+router.post('/start_game', upload.single('logoOfEnemy'), async (req, res, next) => {
+   var { nameOfEnemy, linkToGame, startOfGame, scoresOfGame,
    firstKillOfGame, timeOfGame, killsOfTeam, kdOfTeam } = req.body;
+   let fileName = req.file != null ? req.file.location : null;
    let newGame = new New_Game({
      nameOfEnemy: nameOfEnemy,
-     logoOfEnemy: logoOfEnemy,
+     logoOfEnemy: fileName,
      linkToGame: linkToGame,
      startOfGame: startOfGame,
      scoresOfGame: scoresOfGame,

@@ -9,8 +9,33 @@
   .header_link {
     display: none;
   }
+  #down_arrow {
+    position: relative;
+    left: 183px;
+    top: 96px;
+}
   .wrap_login {
     top: 29px;
+  }
+  .wrap_vector, .wrap_star3, .wrap_star2 {
+    display: none;
+  }
+  .wrap_black_screen {
+    display: none;
+  }
+  .wrap_active_sliders {
+    height: 493px;
+  }
+  .down_sliders {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px 38px;
+    height: 200px;
+    position: relative;
+    top: 24px;
+  }
+  .each_down_slide > img {
+    width: 166px;
   }
   .wrap_reg {
         top: 29px;
@@ -176,7 +201,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .wrap_slider {
-    height: 654px;
+    height: 888px;
   }
   .nicks {
     left: 57px;
@@ -260,7 +285,7 @@
     top: 48px;
   }
   .choice_inside {
-    top: -41px;
+    top: -17px;
     width: 232px;
   }
   .teamLogoSvg {
@@ -276,7 +301,7 @@
     font-size: 30px;
     color: white;
     position: relative;
-    right: 30px;
+    right: -2px;
   }
   .game_window {
     width: 545px;

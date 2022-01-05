@@ -155,7 +155,72 @@ class Results extends React.Component{
   actualEnemyName = () => {
     if(this.state.actualGameId) {
       return(
-        <p className='enemy2'>{this.state.actualGameId.nameOfEnemy}</p>
+        <p className='enemy2'><img src={this.state.actualGameId.logoOfEnemy} id='img_inside3'/></p>
+      )
+    }
+  }
+
+  scoresOfBattle = () => {
+    if(this.state.actualGameId && typeof this.state.actualGameId.scoresOfGame != 'undefined') {
+      return(
+        <p className='qty'>{this.state.actualGameId.scoresOfGame + ' баллов'}</p>
+      )
+    }
+    else {
+      return(
+        <p className='qty'>0 баллов</p>
+      )
+    }
+  }
+
+  scoresOfKill = () => {
+    if(this.state.actualGameId && typeof this.state.actualGameId.firstKillOfGame != 'undefined') {
+      return(
+        <p className='scores_kill'>{this.state.actualGameId.firstKillOfGame + ' баллов'}</p>
+      )
+    }
+    else {
+      return(
+        <p className='scores_kill'>0 баллов</p>
+      )
+    }
+  }
+
+  scoresOfMinutes = () => {
+    if(this.state.actualGameId && typeof this.state.actualGameId.timeOfGame != 'undefined') {
+      return(
+        <p className='scores_kill min_during'>{this.state.actualGameId.timeOfGame + ' баллов'}</p>
+      )
+    }
+    else {
+      return(
+        <p className='scores_kill min_during'>0 баллов</p>
+      )
+    }
+  }
+
+  scoresOfKd = () => {
+    if(this.state.actualGameId && typeof this.state.actualGameId.kdOfTeam != 'undefined') {
+      return(
+          <p className='scores_kill kd_25'>{this.state.actualGameId.kdOfTeam + ' баллов'}</p>
+      )
+    }
+    else {
+      return(
+        <p className='scores_kill kd_25'>0 баллов</p>
+      )
+    }
+  }
+
+  scoresOfKills = () => {
+    if(this.state.actualGameId && typeof this.state.actualGameId.killsOfTeam != 'undefined') {
+      return(
+          <p className='scores_kill kill_during'>{this.state.actualGameId.killsOfTeam + ' баллов'}</p>
+      )
+    }
+    else {
+      return(
+        <p className='scores_kill kill_during'>0 баллов</p>
       )
     }
   }
@@ -166,7 +231,7 @@ class Results extends React.Component{
           <form action='/profile/vote/results' method='POST' className='results_form'>
                   <div className='result_scores'>
                       <p className='will_score'>Какой будет счёт?</p>
-                      <p className='qty'>25 баллов</p>
+                      {this.scoresOfBattle()}
                       <p className='logo_team'><img src={teamLogo} id='teamLogo3'/></p>
                       <input type='text' name='score1' className='scores_inp scores_inp1' placeholder='30' required/>
                       <span className='vs2'>:</span>
@@ -181,7 +246,7 @@ class Results extends React.Component{
                       top: '320px'
                     }} required />
                       <p className='who_kill'>Кто совершит первый килл?</p>
-                      <p className='scores_kill'>25 баллов</p>
+                      {this.scoresOfKill()}
                       <div className='wrap_gamers3'>
                           <p className='everyGamer' onClick={this.fk1F}><img src={gamer1} className='common_kills_imgs' ref={this.comKillImg1}/>
                               <p className='nick_of_gamer1' ref={this.fk1}>klydeep</p>
@@ -208,14 +273,14 @@ class Results extends React.Component{
                   <div className='wrap_minutes'>
                       <div className='minutes'>
                                  <p className='will_score'>Сколько минут продлится игра?</p>
-                                 <p className='scores_kill min_during'>25 баллов</p>
+                                 {this.scoresOfMinutes()}
                                  <input type='text' name='minutes' className='scores_inp scores_inp1' id='min_inp' placeholder='30' required/>
                       </div>
                   </div>
                   <div className='wrap_allKills'>
                       <div className='allKills'>
                                  <p className='will_score qty_kills'>Сколько киллов совершит команда Websterz?</p>
-                                 <p className='scores_kill kill_during'>525 баллов</p>
+                                 {this.scoresOfKills()}
                                  <input type='text' name='kills' className='scores_inp scores_inp1' id='kill_inp2' placeholder='144' required/>
                       </div>
                   </div>
@@ -228,7 +293,7 @@ class Results extends React.Component{
                         top: '320px'
                       }} required/>
                       {this.actualId()}
-                      <p className='scores_kill kd_25'>25 баллов</p>
+                      {this.scoresOfKd()}
                       <div className='wrap_gamers3 wrap_gamers3_down'>
                           <p className='everyGamer2' onClick={this.kd1F}><img src={gamer1} className='common_kills_imgs2' ref={this.bestKdImg1}/>
                               <p className='nick_of_gamer2' ref={this.kd1}>klydeep</p>

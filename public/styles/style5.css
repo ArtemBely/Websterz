@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 15% 15% 70%;
+  z-index: 5;
 }
 .kills2 {
   position: relative;
@@ -15,6 +16,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 15% 15% 70%;
+  z-index: 5;
 }
 .wrap_gamers, .wrap_gamers3 {
   display: grid;
@@ -89,6 +91,7 @@
   display: flex;
   justify-content: center;
   top: 292px;
+  z-index: 10;
 }
 .wrap_allKills {
   position: relative;
@@ -96,6 +99,7 @@
   display: flex;
   justify-content: center;
   top: 406px;
+  z-index: 10;
 }
 .minutes {
   width: 480px;
@@ -147,6 +151,7 @@
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  z-index: 5;
 }
 .wrap_res_foot {
   position: relative;
@@ -216,6 +221,16 @@
   position: relative;
   top: 3px;
 }
+#select1, #select2 {
+  position: relative;
+  width: 94%;
+  height: 100%;
+  background: transparent;
+  color: #808080;
+  border: none;
+  font-size: 20px;
+  outline: none;
+}
 .input_enemy_text, .input_short {
   border-radius: 10px;
   background: transparent;
@@ -229,6 +244,7 @@
   width: 280px;
   height: 50px;
   padding-left: 20px;
+  margin: 0;
 }
 .input_short {
   width: 50px;

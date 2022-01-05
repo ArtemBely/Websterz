@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import bee from '../../public/images/Frame 17.svg';
 import eye from '../../public/images/Group-3.svg';
 import teamLogo from '../../public/images/Group (2).svg';
+import down_arrow from '../../public/images/Down 16px.svg';
 
 class Admin extends React.Component{
 
@@ -43,17 +44,18 @@ class Admin extends React.Component{
             <div className='wrap_form_start'>
 
               <div className='wrap_start_game'>
-        <form action='/profile/start_game' method='POST' className='form_start'>
+        <form action='/profile/start_game' method='POST' className='form_start' encType="multipart/form-data">
                    <div className='start_game'>
                       <p className='start_game_title'>НАЧАТЬ МАТЧ</p>
                           <span className='name_enemy_text'>Название противника</span>
                           <input type='text' name='nameOfEnemy' className='input_enemy_text' placeholder='EnemyTeam' required/>
+                          <img src={down_arrow} id='down_arrow'/>
                           <span className='name_enemy_text'>Логотип противника</span>
-                          <input type='text' name='logoOfEnemy' className='input_enemy_text' placeholder='Логотип противника' required/>
+                          <p className='input_enemy_text spec_logo2'>Логотип противника<input type='file' name='logoOfEnemy' id='file_img' required/></p>
                           <span className='name_enemy_text'>Ссылка на мероприятие</span>
                           <input type='text' name='linkToGame' className='input_enemy_text' placeholder='https://play.esea.net/' required/>
                           <span className='name_enemy_text'>Когда начало матча</span>
-                          <input type='text' name='startOfGame' className='input_enemy_text' placeholder='1 февраля 2021 17:45 Мск' required/>
+                          <input type='datetime-local' name='startOfGame' className='input_enemy_text' required/>
                       <p className='show_link'>
                         <p className='wrap_checkShow' ref={this.checkShow} onClick={this.changeColor}><input type='checkbox' id='link_to_game'/></p>
                         Отображать ссылку на мероприятие</p>
@@ -84,13 +86,31 @@ class Admin extends React.Component{
                           <input type='text' name='scores_final' className='input_short down_input2' placeholder='30'/><span className='between1'>:</span>
                           <input type='text' name='scores_final2' className='input_short input_short2 down_input2' placeholder='15'/>
                           <span className='name_enemy_text kill_down2'>Совершил первый килл</span>
-                          <input type='text' name='kill_final' className='input_enemy_text down_input2' placeholder='Выбрать игрока'/>
+                          <p className='input_enemy_text down_input2'>
+                              <select name='kill_final' id='select1' required>
+                                  <option>Выбрать игрока</option>
+                                  <option>klydeep</option>
+                                  <option>Re1GN</option>
+                                  <option>Chill</option>
+                                  <option>h1te</option>
+                                  <option>Remill</option>
+                              </select>
+                          </p>
                           <span className='name_enemy_text kill_down2'>Длительность игры</span>
                           <input type='text' name='time_final' className='input_enemy_text down_input2' placeholder='85 минут'/>
                           <span className='name_enemy_text kill_down2'>Киллов у команды</span>
                           <input type='text' name='team_kill_final' className='input_enemy_text down_input2' placeholder='144'/>
                           <span className='name_enemy_text kill_down2'>Показатель КД</span>
-                          <input type='text' name='kd_final' className='input_enemy_text down_input2' placeholder='Выбрать игрока'/>
+                          <p className='input_enemy_text down_input2'>
+                              <select name='kd_final' id='select2' required>
+                                  <option>Выбрать игрока</option>
+                                  <option>klydeep</option>
+                                  <option>Re1GN</option>
+                                  <option>Chill</option>
+                                  <option>h1te</option>
+                                  <option>Remill</option>
+                              </select>
+                          </p>
                           {this.idOfActualGame()}
                         <button type='submit' className='start_button_end'>Завершить матч</button>
                    </div>

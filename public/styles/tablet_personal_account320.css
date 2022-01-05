@@ -15,11 +15,22 @@
     font-size: 30px;
     width: 308px;
   }
+  #img_inside2, #img_inside3 {
+        position: relative;
+        left: 19px;
+  }
+  .wrap_star1 {
+    display: none;
+  }
   .scores_start_game {
     top: 146px;
   }
   .start_game {
     grid-template-columns: 1fr;
+  }
+  .enemy_prof {
+    left: 127px;
+    top: -50px;
   }
   .input_short {
         position: relative;

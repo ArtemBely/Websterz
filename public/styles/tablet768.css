@@ -7,9 +7,20 @@
     width: 553px;
     height: 547px;
   }
+  #down_arrow {
+    position: relative;
+    left: 135px;
+    top: 96px;
+}
   .enter_to {
     font-size: 28px !important;
     line-height: 32px !important;
+  }
+  .wrap_vector, .wrap_star3, .wrap_star2 {
+    display: none;
+  }
+  .wrap_black_screen {
+    display: none;
   }
   .wrap_reg_foot {
     top: 88px;
@@ -18,7 +29,11 @@
   }
   .slider {
     width: 768px;
-    height: 800px;
+    height: 1020px;
+  }
+  #wr_gamers1, #wr_nicks1 {
+    position: relative;
+    left: 24px;
   }
   .teamTitle {
     font-size: 38px;
@@ -134,7 +149,7 @@
     top: 63px;
   }
   .choice_inside {
-    top: -37px;
+    top: -23px;
   }
   .teamLogoSvg {
     left: 55px;
@@ -146,7 +161,7 @@
     font-size: 37px;
     color: white;
     position: relative;
-    right: 52px;
+    right: 10px;
   }
   .game_window {
     width: 727px;
@@ -244,12 +259,12 @@
     left: 122px;
   }
   .header_link {
-    left: 62px;
+    left: 86px;
   }
   .vote_header {
-    left: 45px;
+    left: 65px;
 }
 .team_header {
-    left: 48px;
+    left: 61px;
 }
 }

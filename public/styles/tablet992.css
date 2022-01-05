@@ -2,6 +2,11 @@
   .header {
     width: 952px;
   }
+      #down_arrow {
+        position: relative;
+        left: 72px;
+        top: 96px;
+    }
   .wrap_reg_foot {
     position: relative;
     height: 1px;
@@ -10,6 +15,22 @@
   .slider {
     width: 952px;
     height: 890px;
+    overflow: hidden;
+  }
+  .wrap_vector, .wrap_star3, .wrap_star2 {
+    display: none;
+  }
+  .wrap_black_screen {
+    display: none;
+  }
+  .wrap_active_sliders {
+    height: 534px;
+  }
+  .each_down_slide > img {
+    width: 150px;
+  }
+  .down_sliders {
+    grid-gap: 10px;
   }
   .teamTitle {
     font-size: 40px;

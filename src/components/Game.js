@@ -6,18 +6,29 @@ import teamLogo from '../../public/images/Group (2).svg';
 
 class Game extends React.Component {
 
+
+  showEnemy = () => {
+    if(this.props.data) {
+      let actualEnemy = this.props.data[this.props.data.length - 1];
+      return(
+        <p className='for_window_game enemy'>
+        <img src={actualEnemy.logoOfEnemy} id='central_logo'/></p>
+      )
+    }
+  }
+
   render() {
     return (
       <div className='wrap_game'>
           <div className='game'>
-              <p className='next_game'>ПРЕДСТОЯЩИЙ МАТЧ</p>
+              <p className='next_game' id='next_link'>ПРЕДСТОЯЩИЙ МАТЧ</p>
                 <div className='game_window'>
                      <p className='for_window_game teamLogoSvg'><img src={teamLogo} /></p>
                        <p className='vs for_window_game'>VS</p>
-                     <p className='for_window_game enemy'>CHEESE</p>
-                  </div>
+                       {this.showEnemy()}
+                    </div>
                  <div className='do_choice'>
-               <p className='choice_inside'>Сделать свой выбор</p>
+               <NavLink to='/login' className='choice_inside'>Сделать свой выбор</NavLink>
             </div>
           </div>
       </div>

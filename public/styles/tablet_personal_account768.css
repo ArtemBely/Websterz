@@ -17,6 +17,34 @@
   .start_game_title, .final_game_title {
     font-size: 38px;
   }
+  .wrap_active_sliders {
+        height: 431px;
+  }
+  .wrap_star1 {
+    display: none;
+  }
+  .each_down_slide > img {
+    width: 226px;
+  }
+  .down_sliders {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px 44px;
+    width: 760px;
+    height: 199px;
+    position: relative;
+    top: -174px;
+  }
+  .enemy_prof {
+    left: 15px;
+    top: -39px;
+  }
+  #img_inside {
+    width: 60%;
+}
+#img_inside3 {
+  position: relative;
+  left: 77px;
+}
   .input_short {
     position: relative;
     left: 58px;

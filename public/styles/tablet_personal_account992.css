@@ -1,3 +1,8 @@
+@media (min-width: 994px) and (max-width: 1920px) {
+  .wrap_team {
+    overflow: hidden;
+  }
+}
 @media (min-width: 994px) and (max-width: 1340px) {
   .data_of_user, .inside_game_window_prof, .wrap_start_game,
   .scores_start_game, .form_start, .scores_final_game {
@@ -6,11 +11,17 @@
   .next_game_prof, .start_game_title, .final_game_title {
     font-size: 40px;
   }
+  .wrap_star1 {
+    display: none;
+  }
   .game_window_prof, .game, .game_window_prof_voted, .start_game {
         width: 954px;
   }
   .game_window_prof, .game_window_prof_voted {
     height: 290px;
+  }
+  .enemy {
+    right: 27px;
   }
   .show_link {
     left: 139px;
@@ -21,6 +32,17 @@
   .input_short {
     position: relative;
     left: 42px;
+  }
+  .enemy_prof {
+    left: 0px;
+    top: -40px;
+  }
+  .enemy_prof2 {
+    left: -6px;
+    top: -93px;
+  }
+  #img_inside {
+    width: 60%;
   }
   .input_short2 {
     left: -112px;

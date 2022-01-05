@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import BlackScreen from './BlackScreen';
 import { NavLink } from 'react-router-dom';
 import bee from '../../public/images/Frame 17.svg';
 import eye from '../../public/images/Group-3.svg';
@@ -30,7 +31,7 @@ class Profile extends React.Component{
   actualEnemyNameProfile = () => {
     if(this.state.actualGameId2) {
       return(
-        <p className='for_window_game enemy_prof2'>{this.state.actualGameId2.nameOfEnemy}</p>
+        <p className='for_window_game enemy_prof2'><img src={this.state.actualGameId2.logoOfEnemy} id='img_inside4'/></p>
       )
     }
     else if(typeof this.state.actualGameId2 == 'undefined') {
@@ -43,7 +44,7 @@ class Profile extends React.Component{
   actualEnemyNameProfile2 = () => {
     if(this.state.actualGameId2) {
       return (
-        <p className='for_window_game enemy_prof'>{this.state.actualGameId2.nameOfEnemy}</p>
+        <p className='for_window_game enemy_prof'><img src={this.state.actualGameId2.logoOfEnemy} id='img_inside'/></p>
       )
     }
   }
@@ -147,6 +148,9 @@ class Profile extends React.Component{
   render() {
     return(
       <p className='wrap_profile'>
+      <BlackScreen />
+      <div className='wrap_star2 spec_star22'></div>
+      <div className='wrap_star3 spec_star33'></div>
         <div className='wrap_head_prof'><Header /></div>
           <div className='profile'>
               <div className='wrap_data_of_user'>

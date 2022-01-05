@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticRouter, matchPath } from 'react-router-dom';
 import App from '../components/App';
-//import Main from '../components/Main';
+import Main from '../components/Main';
 import Routes from '../components/routes';
 import express from 'express';
 import { renderToString } from 'react-dom/server';
@@ -14,9 +14,11 @@ import session from 'express-session';
 import passport from 'passport';
 import flash from 'connect-flash';
 import cors from 'cors';
+import New_Game from './models/New_Game.js';
 
 import enterRouter from './routes/enter';
 import profileRouter from './routes/profile';
+import postRouter from './routes/sendPost';
 
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
@@ -65,6 +67,7 @@ app.use(passport.session());
 
 app.use('/login', enterRouter);
 app.use('/profile', profileRouter);
+app.use('/send_post_to', postRouter);
 
 /*
 app.get('/', notLoggedIn, (req, res, next) => {
@@ -93,6 +96,35 @@ app.get('/', notLoggedIn, (req, res, next) => {
     );
 });
 */
+
+app.get('/', async(req, res, next) => {
+    let new_game = await New_Game.find();
+    const main = renderToString(
+      <StaticRouter>
+        <Main />
+      </StaticRouter>
+    );
+    const html =
+    `<!DOCTYPE html>
+        <html>
+            <head>
+              <title>collab</title>
+              <link rel="stylesheet" type="text/css" href="../main.css">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <script src='/bundle.js' defer></script>
+                      <script>window.__INITIAL_DATA__= ${serialize(new_game)}</script>
+                        <title>Websterz</title>
+                      </head>
+                    <body>
+                   <div id="app">
+                   <div class="main_wrap">
+                 ${main}
+                 </div>
+               </div>
+            </body>
+        </html>`;
+      res.send(html);
+});
 
 app.get('*', (req, res, next) => {
   const activeRouter = Routes.find((route) => matchPath(req.url, route)) || {};

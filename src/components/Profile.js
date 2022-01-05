@@ -32,6 +32,7 @@ class Profile extends React.Component {
     }
   }
 
+
   render() {
     return (
       <p className='choose_prof'>

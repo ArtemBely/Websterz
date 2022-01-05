@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Results from './Results';
+import BlackScreen from './BlackScreen';
 import { NavLink } from 'react-router-dom';
 import eye from '../../public/images/Group-3.svg';
 import teamLogo from '../../public/images/Group (2).svg';
@@ -30,7 +31,36 @@ class Vote extends React.Component{
   actualEnemyNameVote = () => {
     if(this.state.actualGame) {
       return(
-        <p className='for_window_game enemy'>{this.state.actualGame.nameOfEnemy}</p>
+        <p className='for_window_game enemy'><img src={this.state.actualGame.logoOfEnemy} id='img_inside2' /></p>
+      )
+    }
+  }
+
+  actualDate = () => {
+    if(this.state.actualGame) {
+      console.log(this.state.actualGame.startOfGame.getHours());
+      return (
+        <p className='date_of_game'>
+        {(this.state.actualGame.startOfGame.getDate() - new Date().getDate() > 1 &&
+          this.state.actualGame.startOfGame.getHours() < new Date().getHours() ?
+          this.state.actualGame.startOfGame.getDate() - new Date().getDate() - 1 :
+          this.state.actualGame.startOfGame.getDate() - new Date().getDate() == 1 &&
+          (this.state.actualGame.startOfGame.getHours() - 1) <= new Date().getHours() ?
+          0 : this.state.actualGame.startOfGame.getDate() - new Date().getDate()
+        )
+           + ' ДЕНЬ ' +
+
+         ((this.state.actualGame.startOfGame.getHours() - 1) > new Date().getHours() &&
+          this.state.actualGame.startOfGame.getMinutes() < new Date().getMinutes() ?
+          this.state.actualGame.startOfGame.getHours() - new Date().getHours() - 2 :
+          (this.state.actualGame.startOfGame.getHours() - 1) > new Date().getHours() ?
+          this.state.actualGame.startOfGame.getHours() - new Date().getHours() - 1 :
+          23 - ((new Date().getHours() + 1) - this.state.actualGame.startOfGame.getHours())) + ' ЧАСОВ ' +
+
+          (this.state.actualGame.startOfGame.getMinutes() > new Date().getMinutes() ?
+           this.state.actualGame.startOfGame.getMinutes() - new Date().getMinutes() - 1 :
+           60 - (new Date().getMinutes() - this.state.actualGame.startOfGame.getMinutes())) + ' МИНУТ '
+        }</p>
       )
     }
   }
@@ -38,13 +68,15 @@ class Vote extends React.Component{
   render() {
     return(
       <p className='wrap_profile'>
+      <BlackScreen />
+      <div className='wrap_star1 spec_star1'></div>
+      <div className='wrap_star2 spec_star2'></div>
+      <div className='wrap_star3 spec_star3'></div>
         <div className='wrap_head_prof'><Header /></div>
           <div className='wrap_game baby_game'>
               <div className='game_vote'>
                   <p className='next_game_vote'>ДО НАЧАЛА МАТЧА</p>
-                   <p className='date_of_game'>
-                   {new Date().getDate() + ' ДЕНЬ ' + new Date().getHours() +
-                    ' ЧАСОВ ' + new Date().getMinutes() + ' МИНУТ'}</p>
+                  {this.actualDate()}
                     <div className='game_window_vote'>
                          <p className='for_window_game teamLogoSvg'><img src={teamLogo} /></p>
                            <p className='vs for_window_game'>VS <span id='conf'>Мероприятие</span></p>

@@ -83,23 +83,131 @@ body {
   background: black;
 }
 .slider {
+  position: relative;
+  z-index: 5;
   width: 1180px;
-  height: 780px;
+  height: 1063px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 62% 38%;
+}
+.wrap_star1 {
+    position: absolute;
+    top: -1161px;
+}
+.wrap_vector {
+      position: relative;
+      top: 137px;
+      left: 4px;
+}
+.spec_star3 {
+      top: 1964px !important;
+}
+.spec_star2 {
+  top: 1659px !important;
+}
+.wrap_active_sliders {
+  margin: 0;
+  position: absolute;
+  height: 660px;
+  display: flex;
+  justify-content: center;
+  left: 1300px;
+  transition: 0.2s;
+}
+.spec_star1 {
+  top: 800px !important;
+}
+.spec_star33 {
+      top: -282px !important;
+}
+.spec_star22 {
+  top: -100px !important;
+}
+.wrap_black_screen {
+  position: fixed;
+  width: 100%;
+  height: 362px;
+  background: rgba(0, 0, 0, 0.6);
+  top: 285px;
+  z-index: 4;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8), transparent);
+}
+.appearSlide {
+  z-index: 999;
+  left: 0px;
+}
+.slowAnim {
+  animation: slidein 0.6s 1;
+}
+@keyframes slidein {
+  0% { left: 0px; }
+  50% { left: -1300px; opacity: 0; }
+  100% { left: 1300px; }
+}
+.active_sliders {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+}
+.each_down_slide > img {
+  cursor: pointer;
+}
+.down_sliders {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 19px;
 }
 .wrap_team {
   width: 100%;
-  background: black;
+  background-color: black;
   height: 900px;
   position: relative;
   display: flex;
+  overflow: hidden;
   justify-content: center;
+}
+.wrap_star1 {
+  position: absolute;
+  width: 100%;
+  top: 583px;
+  height: 790px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url('../images/Star 365.svg');
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.wrap_star2 {
+  position: absolute;
+  width: 100%;
+  top: 2477px;
+  height: 790px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url('/images/Star 37.svg');
+  z-index: 3;
+}
+.wrap_star3 {
+  position: absolute;
+  width: 100%;
+  top: 583px;
+  height: 790px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url('../images/Star 36.svg');
+  z-index: 1;
 }
 .team {
   width: 1180px;
+  padding-top: 9px;
   position: relative;
   display: grid;
   grid-template-rows: 10% 70% 20%;
   grid-template-columns: 1fr;
+  z-index: 5;
 }
 .teamTitle {
   position: relative;
