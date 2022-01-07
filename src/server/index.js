@@ -14,6 +14,11 @@ import session from 'express-session';
 import passport from 'passport';
 import flash from 'connect-flash';
 import cors from 'cors';
+import fs from 'fs';
+import path from 'path';
+import http from 'http';
+import https from 'https';
+
 import New_Game from './models/New_Game.js';
 import Results from './models/Results.js';
 
@@ -24,6 +29,14 @@ import postRouter from './routes/sendPost';
 const app = express();
 const CONNECTION_URI = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
+
+var privateKey = fs.readFileSync(path.resolve('src/server/ssl/websterz.key'));
+var certificate = fs.readFileSync(path.resolve('src/server/ssl/websterz.pem'));
+
+var credentials = {
+  key: privateKey,
+  cert: certificate
+}
 
 require('dotenv/config');
 
@@ -190,10 +203,15 @@ app.use((error, req, res, next) => {
   });
 });
 */
+
 app.use((req, res, next) => {  //<-- заменить если появится непредвиденная ошибка
    const err = new Error ('Noooo');
      err.status = 404;
      next (err);
 });
 
-app.listen(8080, () => {console.log('connected!')});
+var httpServer = http.createServer(app);
+var httpsServer = https.createServer(credentials, app);
+
+httpServer.listen(8080, () => {console.log('connected on http!')});
+httpsServer.listen(443, () => {console.log('connected on https!')});
