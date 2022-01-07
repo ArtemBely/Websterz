@@ -6,6 +6,9 @@
   .header_link {
     display: none;
   }
+  .wrap_team {
+    overflow: visible;
+  }
   #down_arrow {
     position: relative;
     left: -266px;

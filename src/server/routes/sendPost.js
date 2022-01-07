@@ -29,7 +29,7 @@ router.post('/', (req, res, next) => {
       // send mail with defined transport object
       let info = await transporter.sendMail({
         from: '"Order from site" <websterz@acorn.ws>', // sender address
-        to: "belysevartem9@gmail.com", // list of receivers
+        to: "vn@goweb.com", // list of receivers
         subject: "New partner ✔", // Subject line
         text: "Hello world?", // plain text body
         html: output // html body

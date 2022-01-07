@@ -15,6 +15,7 @@ import passport from 'passport';
 import flash from 'connect-flash';
 import cors from 'cors';
 import New_Game from './models/New_Game.js';
+import Results from './models/Results.js';
 
 import enterRouter from './routes/enter';
 import profileRouter from './routes/profile';
@@ -98,7 +99,12 @@ app.get('/', notLoggedIn, (req, res, next) => {
 */
 
 app.get('/', async(req, res, next) => {
-    let new_game = await New_Game.find();
+    var results = await New_Game.find();
+    var allResults = await Results.find();
+    var i = results.length;
+    var actualGame = results[i - 1];
+    var inTimeGame = allResults.filter(nextGame => nextGame.actualGameFinished == actualGame._id);
+    inTimeGame.length > 0 ? actualGame = {} : actualGame;
     const main = renderToString(
       <StaticRouter>
         <Main />
@@ -108,11 +114,12 @@ app.get('/', async(req, res, next) => {
     `<!DOCTYPE html>
         <html>
             <head>
-              <title>collab</title>
+              <title>Websterz</title>
+              <link rel="icon" href="/images/Group 280.ico" type="image/x-icon" />
               <link rel="stylesheet" type="text/css" href="../main.css">
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                   <script src='/bundle.js' defer></script>
-                      <script>window.__INITIAL_DATA__= ${serialize(new_game)}</script>
+                      <script>window.__INITIAL_DATA__= ${serialize(actualGame)}</script>
                         <title>Websterz</title>
                       </head>
                     <body>
@@ -144,7 +151,8 @@ app.get('*', (req, res, next) => {
         `<!DOCTYPE html>
             <html>
                 <head>
-                  <title>collab</title>
+                  <title>Websterz</title>
+                  <link rel="icon" href="/images/Group 280.ico" type="image/x-icon" />
                   <link rel="stylesheet" type="text/css" href="../main.css">
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                       <script src='/bundle.js' defer></script>

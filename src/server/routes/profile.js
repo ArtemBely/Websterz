@@ -54,7 +54,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     var i = results.length;
     var actualGame = results[i - 1];
     var inTimeGame = allResults.filter(nextGame => nextGame.actualGameFinished == actualGame._id);
-    inTimeGame.length > 0 ? actualGame = {} : null;
+    inTimeGame.length > 0 ? actualGame = {} : actualGame;
 
     if(user.votation.length > 0 && typeof user.votation[0] == 'object') {
 
@@ -101,6 +101,7 @@ router.get('/', isLoggedIn, async (req, res, next) => {
     <html>
         <head>
           <title>Profile</title>
+          <link rel="icon" href="/images/Group 280.ico" type="image/x-icon" />
                <link rel="stylesheet" type="text/css" href="../main.css">
                  <meta name="viewport" content="width=device-width, initial-scale=1">
               <script src='/bundle.js' defer></script>
@@ -124,7 +125,7 @@ router.get('/vote', isLoggedIn, async (req, res, next) => {
     var i = results.length;
     var actualGame = results[i - 1];
     var inTimeGame = allResults2.filter(nextGame => nextGame.actualGameFinished == actualGame._id);
-    inTimeGame.length > 0 ? actualGame = {} : null;
+    inTimeGame.length > 0 ? actualGame = {} : actualGame;
 
   const vote = renderToString(
     <StaticRouter>
@@ -136,6 +137,7 @@ router.get('/vote', isLoggedIn, async (req, res, next) => {
     <html>
         <head>
           <title>Profile</title>
+          <link rel="icon" href="/images/Group 280.ico" type="image/x-icon" />
                <link rel="stylesheet" type="text/css" href="../main.css">
                  <meta name="viewport" content="width=device-width, initial-scale=1">
               <script src='/bundle.js' defer></script>

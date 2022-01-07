@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import mainScreen from '../../public/images/Frame 510.png';
+import mainScreen from '../../public/images/pattern.png';
 import teamLogo from '../../public/images/Group (2).svg';
 
 
@@ -8,11 +8,12 @@ class Game extends React.Component {
 
 
   showEnemy = () => {
-    if(this.props.data) {
-      let actualEnemy = this.props.data[this.props.data.length - 1];
+    if(this.props.data && this.props.data.logoOfEnemy) {
+      //let actualEnemy = this.props.data[this.props.data.length - 1];
       return(
         <p className='for_window_game enemy'>
-        <img src={actualEnemy.logoOfEnemy} id='central_logo'/></p>
+            <img src={this.props.data.logoOfEnemy} id='central_logo'/>
+        </p>
       )
     }
   }

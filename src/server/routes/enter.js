@@ -31,10 +31,11 @@ router.get(['/', '/registration'], notLoggedIn, (req, res, next) => {
     <html>
         <head>
           <title>Profile</title>
+            <link rel="icon" href="/images/Group 280.ico" type="image/x-icon" />
                <link rel="stylesheet" type="text/css" href="../main.css">
                  <meta name="viewport" content="width=device-width, initial-scale=1">
               <script src='/bundle.js' defer></script>
-              <script>window.__INITIAL_ERRORS__ = ${serialize(messages)}</script>
+           <script>window.__INITIAL_ERRORS__ = ${serialize(messages)}</script>
         </head>
         <body>
              <div id="app">

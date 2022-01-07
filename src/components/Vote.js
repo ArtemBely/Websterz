@@ -6,6 +6,7 @@ import BlackScreen from './BlackScreen';
 import { NavLink } from 'react-router-dom';
 import eye from '../../public/images/Group-3.svg';
 import teamLogo from '../../public/images/Group (2).svg';
+import im1 from '../../public/images/Star 36 (1) — копия.svg';
 
 class Vote extends React.Component{
 
@@ -29,7 +30,7 @@ class Vote extends React.Component{
   }
 
   actualEnemyNameVote = () => {
-    if(this.state.actualGame) {
+    if(this.state.actualGame && this.state.actualGame.logoOfEnemy) {
       return(
         <p className='for_window_game enemy'><img src={this.state.actualGame.logoOfEnemy} id='img_inside2' /></p>
       )
@@ -37,7 +38,7 @@ class Vote extends React.Component{
   }
 
   actualDate = () => {
-    if(this.state.actualGame) {
+    if(this.state.actualGame && this.state.actualGame.startOfGame) {
       console.log(this.state.actualGame.startOfGame.getHours());
       return (
         <p className='date_of_game'>
@@ -63,6 +64,11 @@ class Vote extends React.Component{
         }</p>
       )
     }
+    else {
+      return (
+        <p className='date_of_game'>В ОЖИДАНИИ ИГРЫ</p>
+      )
+    }
   }
 
   render() {
@@ -70,8 +76,13 @@ class Vote extends React.Component{
       <p className='wrap_profile'>
       <BlackScreen />
       <div className='wrap_star1 spec_star1'></div>
-      <div className='wrap_star2 spec_star2'></div>
-      <div className='wrap_star3 spec_star3'></div>
+      <div className='wrap_star2 spec_star2_vote'>
+      </div>
+      <div className='wrap_star3 spec_star3_vote'>
+          <p className='star3_inside'>
+              <img src={im1} />
+          </p>
+      </div>
         <div className='wrap_head_prof'><Header /></div>
           <div className='wrap_game baby_game'>
               <div className='game_vote'>

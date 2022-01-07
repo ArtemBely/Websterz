@@ -160,6 +160,8 @@
 }
 .wrap_head_prof {
   margin-top: -17px;
+  position: relative;
+  z-index: 17;
 }
 .profile {
   position: relative;

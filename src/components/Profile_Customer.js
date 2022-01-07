@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 import bee from '../../public/images/Frame 17.svg';
 import eye from '../../public/images/Group-3.svg';
 import teamLogo from '../../public/images/Group (2).svg';
+import im1 from '../../public/images/Star 36 (1) — копия.svg';
 
 class Profile extends React.Component{
 
@@ -150,7 +151,7 @@ class Profile extends React.Component{
       <p className='wrap_profile'>
       <BlackScreen />
       <div className='wrap_star2 spec_star22'></div>
-      <div className='wrap_star3 spec_star33'></div>
+      <div className='wrap_star3 spec_star33'><p className='wrap_star3_img'><img src={im1} /></p></div>
         <div className='wrap_head_prof'><Header /></div>
           <div className='profile'>
               <div className='wrap_data_of_user'>
