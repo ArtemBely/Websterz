@@ -153,9 +153,9 @@ class Results extends React.Component{
   }
 
   actualEnemyName = () => {
-    if(this.state.actualGameId) {
+    if(this.state.actualGameId && this.state.actualGameId.logoOfEnemy) { 
       return(
-        <p className='enemy2'><img src={this.state.actualGameId.logoOfEnemy} id='img_inside3'/></p>
+        <p className='enemy2'><img src={'../uploads/' + this.state.actualGameId.logoOfEnemy} id='img_inside3'/></p>
       )
     }
   }

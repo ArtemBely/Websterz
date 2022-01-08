@@ -12,7 +12,7 @@ class Game extends React.Component {
       //let actualEnemy = this.props.data[this.props.data.length - 1];
       return(
         <p className='for_window_game enemy'>
-            <img src={this.props.data.logoOfEnemy} id='central_logo'/>
+            <img src={'uploads/' + this.props.data.logoOfEnemy} id='central_logo'/>
         </p>
       )
     }

@@ -32,7 +32,7 @@ class Vote extends React.Component{
   actualEnemyNameVote = () => {
     if(this.state.actualGame && this.state.actualGame.logoOfEnemy) {
       return(
-        <p className='for_window_game enemy'><img src={this.state.actualGame.logoOfEnemy} id='img_inside2' /></p>
+        <p className='for_window_game enemy'><img src={'../uploads/' + this.state.actualGame.logoOfEnemy} id='img_inside2' /></p>
       )
     }
   }

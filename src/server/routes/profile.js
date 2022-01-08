@@ -11,17 +11,20 @@ import serialize from 'serialize-javascript';
 import multer from 'multer';
 import multerS3 from 'multer-s3';
 import aws from 'aws-sdk';
+import path from 'path';
+import fs from 'fs';
 const router = express.Router();
 
 require('dotenv/config');
 
-aws.config.update({
-  secretAccessKey: process.env.s3_secretAccessKey,
-  accessKeyId: process.env.s3_accessKeyId,
-  region: process.env.s3_bucketRegion
+//Set Storage
+const storage = multer.diskStorage({
+  destination: './public/uploads/',
+  filename: function(req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now() +
+    path.extname(file.originalname));
+  }
 });
-
-const s3 = new aws.S3();
 
 const fileFilter = (req, file, cb) => {
   if( file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetipe === 'image/svg') {
@@ -29,6 +32,21 @@ const fileFilter = (req, file, cb) => {
   }
   else  { cb(null, false); }
 };
+
+var upload = multer({
+  fileFilter: fileFilter,
+  limits:{ fileSize: 5000000 },
+  storage: storage
+});
+
+/* s3
+aws.config.update({
+  secretAccessKey: process.env.s3_secretAccessKey,
+  accessKeyId: process.env.s3_accessKeyId,
+  region: process.env.s3_bucketRegion
+});
+
+const s3 = new aws.S3();
 
 var upload = multer({
   fileFilter: fileFilter,
@@ -45,6 +63,34 @@ var upload = multer({
     }
   })
 });
+
+router.post('/start_game', upload.single('logoOfEnemy'), async (req, res, next) => {
+   var { nameOfEnemy, linkToGame, startOfGame, scoresOfGame,
+   firstKillOfGame, timeOfGame, killsOfTeam, kdOfTeam } = req.body;
+   let fileName = req.file != null ? req.file.location : null;
+   let newGame = new New_Game({
+     nameOfEnemy: nameOfEnemy,
+     logoOfEnemy: fileName,
+     linkToGame: linkToGame,
+     startOfGame: startOfGame,
+     scoresOfGame: scoresOfGame,
+     firstKillOfGame: firstKillOfGame,
+     timeOfGame: timeOfGame,
+     killsOfTeam: killsOfTeam,
+     kdOfTeam: kdOfTeam
+   });
+   try {
+     newGame = await newGame.save();
+     console.log(newGame);
+     res.redirect('/profile');
+   }
+   catch(err) {
+     if (err) throw err;
+     console.log(err);
+   }
+});
+*/
+
 
 router.get('/', isLoggedIn, async (req, res, next) => {
   var user = req.user;
@@ -154,9 +200,10 @@ router.get('/vote', isLoggedIn, async (req, res, next) => {
 });
 
 router.post('/start_game', upload.single('logoOfEnemy'), async (req, res, next) => {
+
    var { nameOfEnemy, linkToGame, startOfGame, scoresOfGame,
    firstKillOfGame, timeOfGame, killsOfTeam, kdOfTeam } = req.body;
-   let fileName = req.file != null ? req.file.location : null;
+   let fileName = req.file != null ? req.file.filename : null;
    let newGame = new New_Game({
      nameOfEnemy: nameOfEnemy,
      logoOfEnemy: fileName,
@@ -180,6 +227,18 @@ router.post('/start_game', upload.single('logoOfEnemy'), async (req, res, next) 
 });
 
 router.post('/finish_game', async (req, res, next) => {
+  //Delete all files in the directory
+  const directory = 'public/uploads/';
+  fs.readdir(directory, (err, files) => {
+    if(err) throw err;
+
+    for (const file of files) {
+      fs.unlink(path.join(directory, file), err => {
+        if(err) throw err;
+      });
+    }
+  });
+  
   var { scores_final, scores_final2, kill_final, time_final,
         team_kill_final, kd_final, actualGameFinished } = req.body;
   let results = new Results({

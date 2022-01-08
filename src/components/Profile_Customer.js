@@ -32,7 +32,7 @@ class Profile extends React.Component{
   actualEnemyNameProfile = () => {
     if(this.state.actualGameId2) {
       return(
-        <p className='for_window_game enemy_prof2'><img src={this.state.actualGameId2.logoOfEnemy} id='img_inside4'/></p>
+        <p className='for_window_game enemy_prof2'><img src={'uploads/' + this.state.actualGameId2.logoOfEnemy} id='img_inside4'/></p>
       )
     }
     else if(typeof this.state.actualGameId2 == 'undefined') {
@@ -43,9 +43,9 @@ class Profile extends React.Component{
   }
 
   actualEnemyNameProfile2 = () => {
-    if(this.state.actualGameId2) {
+    if(this.state.actualGameId2 && this.state.actualGameId2.logoOfEnemy) {
       return (
-        <p className='for_window_game enemy_prof'><img src={this.state.actualGameId2.logoOfEnemy} id='img_inside'/></p>
+        <p className='for_window_game enemy_prof'><img src={'uploads/' + this.state.actualGameId2.logoOfEnemy} id='img_inside'/></p>
       )
     }
   }
