@@ -5,6 +5,34 @@ import nodemailer from 'nodemailer';
 const router = express.Router();
 
 router.post('/', (req, res, next) => {
+
+  //Подключение капчи
+  /*
+  if(req.body.captcha === undefined ||
+     req.body.captcha === '' ||
+     req.body.captcha === null
+   ) {
+     return res.json({"success": false, "msg" : "Пожалуйста, заполните капчу"});
+   }
+
+      const secretKey = process.env.SECRET_KEY;
+
+      //Verify URL
+      const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}
+      &remoteip=${req.connection.remoteAddress}`;
+
+      //Make Request To verifyUrl
+      request(verifyUrl, (err, response, body) => {
+        body = JSON.parse(body);
+
+        if(body.success != undefined && !body.success) {
+          return res.json({"success": false, "msg" : "Пожалуйста, заполните капчу корректно"});
+        }
+
+        return res.json({"success": true, "msg" : "Верификация успешна"});
+      });
+  */
+
       const output = `
     <p> Данные о посетителе </p>
     <ul>
@@ -29,7 +57,7 @@ router.post('/', (req, res, next) => {
       // send mail with defined transport object
       let info = await transporter.sendMail({
         from: '"Order from site" <websterz@acorn.ws>', // sender address
-        to: "vn@goweb.com", // list of receivers
+        to: "vn@goweb.com", // list of receivers vn@goweb.com
         subject: "New partner ✔", // Subject line
         text: "Hello world?", // plain text body
         html: output // html body

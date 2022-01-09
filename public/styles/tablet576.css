@@ -20,6 +20,14 @@
   .wrap_vector, .wrap_star3, .wrap_star2 {
     display: none;
   }
+  .not_a_rbt {
+      position: absolute;
+      top: 268px;
+      color: white;
+      font-size: 20px;
+      left: 185px;
+      width: 145px;
+  }
   .wrap_black_screen {
     display: none;
   }

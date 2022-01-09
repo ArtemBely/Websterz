@@ -21,6 +21,14 @@
 .wrap_black_screen, .wrap_star3, .wrap_star2 {
   display: none;
 }
+.not_a_rbt {
+    position: absolute;
+    top: 63px;
+    color: white;
+    font-size: 20px;
+    left: 185px;
+    width: 115px;
+}
 .wrap_vector {
   display: none;
 }

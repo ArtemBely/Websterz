@@ -22,6 +22,14 @@
   .wrap_black_screen {
     display: none;
   }
+  .not_a_rbt {
+    position: absolute;
+    top: 258px;
+    color: white;
+    font-size: 20px;
+    left: -1px;
+    width: 145px;
+  }
   .wrap_reg_foot {
     top: 88px;
     height: 1px;

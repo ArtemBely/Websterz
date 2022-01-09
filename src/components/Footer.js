@@ -16,9 +16,18 @@ class Footer extends React.Component {
     }
 
     this.state = {
-      user
+      user,
+      dis: true
     }
+
+    this.check_rbt = React.createRef();
   }
+
+toggleRbt = () => {
+  this.check_rbt.current.classList.toggle('done_rbt');
+  this.state.dis ? this.setState({ dis: false }) :
+  this.setState({ dis: true });
+}
 
 returnFooter = () => {
   if(typeof window != "undefined" && window.location.pathname == '/') {
@@ -102,7 +111,9 @@ render() {
                  <input type='text' name='email' placeholder='email@site.com' className='footer_inputs' required/>
                  <p className='credentials quest1'>Вопрос</p>
                  <input type='text' name='question' placeholder='Введите ваш вопрос здесь' className='footer_inputs quest2' required/>
-                 <button type='submit' id='sub_form'>Отправить</button>
+                 <p className='not_a_rbt'>Я не робот
+                 <p id='check_rbt' ref={this.check_rbt} onClick={this.toggleRbt}></p></p>
+                 <button type='submit' id='sub_form' disabled={this.state.dis}>Отправить</button>
                </form>
                <p className='push_me'>Нажимая на кнопку «Отправить»,  вы даёте согласие на обработку данных</p>
             </div>

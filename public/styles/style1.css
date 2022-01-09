@@ -69,6 +69,7 @@ body {
     top: 27px;
     left: 91px;
 }
+
 .vote_header {
   left: 74px;
 }
@@ -90,6 +91,29 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 62% 38%;
+}
+.not_a_rbt {
+  position: absolute;
+  top: 60px;
+  color: white;
+  font-size: 20px;
+  left: 402px;
+  width: 145px;
+}
+#check_rbt {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid white;
+  left: 112px;
+  margin: 0;
+  top: -23px;
+  cursor: pointer;
+}
+.done_rbt {
+  border: none !important;
+  background: #FFAC22;
 }
 .wrap_star1 {
     position: absolute;
