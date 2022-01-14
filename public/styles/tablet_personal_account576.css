@@ -18,6 +18,9 @@
   .show_link {
     display: none;
   }
+  .move_right {
+    left: -170px;
+  }
   .wrap_star1 {
     display: none;
   }

@@ -5,11 +5,30 @@ const Schema = mongoose.Schema;
 
 const customer = new Schema({
   email: {type: String, required: true},
-  password: {type: String, required: true},
+  password: {type: String, unique: true, required: true},
   scores: {type: String},
   admin: {type: String},
   votation: {type: Array},
-  arrayOfResults: {type: Array}
+  arrayOfResults: {type: Array},
+  resetPasswordToken: {type: String},
+  resetPasswordExpires: {type: Date}
+});
+
+customer.pre('save', function(next){
+    var user = this;
+    if (!this.isModified('password') || this.isNew) return next();
+
+    bcrypt.genSalt(10, function(err, salt){
+        if (err){ return next(err) }
+
+        bcrypt.hash(user.password, salt, function(err, hash){
+            if(err){return next(err)}
+
+            user.password = hash;
+            console.log(user);
+            next();
+        })
+   })
 });
 
 module.exports = mongoose.model('Customer', customer);

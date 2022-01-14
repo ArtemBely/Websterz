@@ -21,13 +21,25 @@
 .wrap_black_screen, .wrap_star3, .wrap_star2 {
   display: none;
 }
+.wrap_reg_errors {
+  top: 411px;
+  left: 20px;
+  width: 292px;
+}
+.reg_errors {
+  font-size: 13px;
+  margin: 0;
+}
+.errs_login {
+  top: 418px !important;
+}
 .not_a_rbt {
-    position: absolute;
-    top: 63px;
-    color: white;
-    font-size: 20px;
-    left: 185px;
-    width: 115px;
+  position: absolute;
+  top: 186px;
+  color: white;
+  font-size: 20px;
+  left: 0;
+  width: 115px;
 }
 .wrap_vector {
   display: none;
@@ -347,10 +359,13 @@
   }
   .wrap_footer {
     top: 540px;
-    height: 766px;
+    height: 966px;
   }
   .footer {
     width: 320px;
+  }
+  .check_auto {
+        width: 273px;
   }
   .high_footer {
     top: 41px;
@@ -395,7 +410,7 @@
     font-size: 14px;
     grid-column: 1 / 2;
     position: relative;
-    top: -18px;
+    top: 116px;
     left: 39px;
     line-height: 140%;
     text-decoration-line: underline;
@@ -405,7 +420,7 @@
   #sub_form {
         grid-column: 1 / 2;
         right: 0;
-        top: 14px;
+        top: 149px;
         width: 320px;
   }
   .quest2 {
@@ -423,7 +438,7 @@
   }
   .low_footer {
     height: 18px;
-    top: 190px;
+    top: 278px;
     display: flex;
     justify-content: center;
   }

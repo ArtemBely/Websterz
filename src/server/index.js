@@ -82,7 +82,6 @@ app.use(passport.session());
 app.use('/login', enterRouter);
 app.use('/profile', profileRouter);
 app.use('/send_post_to', postRouter);
-
 /*
 app.get('/', notLoggedIn, (req, res, next) => {
   let cond = req.isAuthenticated();

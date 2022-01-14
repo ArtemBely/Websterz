@@ -22,13 +22,23 @@
   .wrap_black_screen {
     display: none;
   }
+  .reg_errors {
+    margin: 0;
+  }
+  .wrap_reg_errors {
+    top: 461px;
+    left: 93px;
+  }
   .not_a_rbt {
     position: absolute;
-    top: 258px;
+    top: 204px;
     color: white;
     font-size: 20px;
     left: -1px;
     width: 145px;
+  }
+  .check_auto {
+    width: 280px;
   }
   .wrap_reg_foot {
     top: 88px;
@@ -203,7 +213,7 @@
   }
   .wrap_footer {
     top: 76px;
-    height: 620px;
+    height: 818px;
   }
   .footer {
     width: 768px;
@@ -219,7 +229,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 200px;
-    top: -91px;
+    top: -119px;
   }
   .form_1 {
         grid-template-columns: 1fr;
@@ -228,7 +238,7 @@
     font-size: 14px;
     grid-column: 1 / 2;
     position: relative;
-    top: -85px;
+    top: 66px;
     left: 185px;
     line-height: 140%;
     text-decoration-line: underline;
@@ -238,7 +248,7 @@
   #sub_form {
         grid-column: 1 / 2;
         right: 0;
-        top: 14px;
+        top: 164px;
   }
   .quest2 {
     position: relative;
@@ -255,7 +265,8 @@
   }
   .low_footer {
         height: 18px;
-        top: 158px;
+        top: 223px;
+        width: 200px;
   }
   .header {
     overflow: visible;

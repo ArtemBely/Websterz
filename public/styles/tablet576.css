@@ -20,13 +20,24 @@
   .wrap_vector, .wrap_star3, .wrap_star2 {
     display: none;
   }
+  .wrap_reg_errors {
+    top: 460px;
+    left: 84px;
+    height: 16px;
+  }
+  .reg_errors {
+    margin: 0;
+  }
   .not_a_rbt {
-      position: absolute;
-      top: 268px;
-      color: white;
-      font-size: 20px;
-      left: 185px;
-      width: 145px;
+        position: absolute;
+        top: 202px;
+        color: white;
+        font-size: 20px;
+        left: 0px;
+        width: 145px;
+  }
+  .check_auto {
+        width: 272px;
   }
   .wrap_black_screen {
     display: none;
@@ -344,7 +355,7 @@
   }
   .wrap_footer {
     top: -81px;
-    height: 620px;
+    height: 820px;
   }
   .footer {
     width: 576px;
@@ -377,7 +388,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     height: 200px;
-    top: -48px;
+    top: -103px;
   }
   .form_1 {
         grid-template-columns: 1fr;
@@ -386,7 +397,7 @@
     font-size: 14px;
     grid-column: 1 / 2;
     position: relative;
-    top: -85px;
+    top: 63px;
     left: 185px;
     line-height: 140%;
     text-decoration-line: underline;
@@ -396,7 +407,7 @@
   #sub_form {
         grid-column: 1 / 2;
         right: 0;
-        top: 14px;
+        top: 163px;
   }
   .quest2 {
     position: relative;
@@ -413,7 +424,7 @@
   }
   .low_footer {
         height: 18px;
-        top: 158px;
+        top: 226px;
   }
   .header {
     overflow: visible;

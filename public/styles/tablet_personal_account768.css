@@ -26,9 +26,12 @@
   .each_down_slide > img {
     width: 226px;
   }
+  .move_right {
+    left: -240px;
+  }
   .down_sliders {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px 44px;
+    grid-gap: 63px 44px;
     width: 760px;
     height: 199px;
     position: relative;

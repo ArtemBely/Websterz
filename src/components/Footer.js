@@ -17,16 +17,15 @@ class Footer extends React.Component {
 
     this.state = {
       user,
-      dis: true
+      dlt: 'Удалите этот текст'
     }
 
     this.check_rbt = React.createRef();
+    this.aboutInp = React.createRef();
   }
 
-toggleRbt = () => {
-  this.check_rbt.current.classList.toggle('done_rbt');
-  this.state.dis ? this.setState({ dis: false }) :
-  this.setState({ dis: true });
+toggleRbt = (e) => {
+  this.setState({ dlt: e.target.value });
 }
 
 returnFooter = () => {
@@ -111,11 +110,12 @@ render() {
                  <input type='text' name='email' placeholder='email@site.com' className='footer_inputs' required/>
                  <p className='credentials quest1'>Вопрос</p>
                  <input type='text' name='question' placeholder='Введите ваш вопрос здесь' className='footer_inputs quest2' required/>
-                 <p className='not_a_rbt'>Я не робот
-                 <p id='check_rbt' ref={this.check_rbt} onClick={this.toggleRbt}></p></p>
-                 <button type='submit' id='sub_form' disabled={this.state.dis}>Отправить</button>
+                 <input type='text' name='about' placeholder='Проверка' ref={this.aboutInp} className='aboutInp'/>
+                 <p className='not_a_rbt'><p className='check_auto'>Проверка на автоматизацию, удалите этот текст для отправки сообщения</p>
+                 <input type='text' name='sitch' className='footer_inputs' id='check_rbt_inp' ref={this.check_rbt} onInput={this.toggleRbt} value={this.state.dlt}/></p>
+                 <button type='submit' id='sub_form'>Отправить</button>
                </form>
-               <p className='push_me'>Нажимая на кнопку «Отправить»,  вы даёте согласие на обработку данных</p>
+               <p className='push_me'>Нажимая на кнопку "Отправить", вы даёте согласие на обработку данных</p>
             </div>
             <div className='low_footer'>
                 © Websterz, 2021

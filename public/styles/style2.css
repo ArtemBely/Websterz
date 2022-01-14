@@ -127,23 +127,48 @@
 .each_wear {
   width: 305px;
   height: 430px;
-  background: url('../images/Group 19.png');
   transition: 0.2s;
   cursor: pointer;
+  overflow: hidden;
 }
-.each_wear:nth-child(1):hover {
-  background: url('../images/Group 18.png');
+.greyimg {
+  width: 100%;
 }
-.each_wear:nth-child(2):hover {
-  background: url('../images/Group 18.png');
+.chooseimg {
+  display: none;
+  width: 100%;
 }
-.each_wear:nth-child(3):hover {
-  background: url('../images/Group 18.png');
+.each_down_slide {
+  height: 102px;
 }
-.each_wear:nth-child(4):hover {
-  background: url('../images/Group 18.png');
+.each_wear:nth-child(1):hover #greyimg1{
+  opacity: 0;
+  display: none;
 }
-
+.each_wear:nth-child(1):hover #chooseimg1 {
+  display: block;
+}
+.each_wear:nth-child(2):hover #greyimg2{
+  opacity: 0;
+  display: none;
+}
+.each_wear:nth-child(2):hover #chooseimg2 {
+  display: block;
+}
+.each_wear:nth-child(3):hover #greyimg3{
+  opacity: 0;
+  display: none;
+}
+.each_wear:nth-child(3):hover #chooseimg3 {
+  display: block;
+}
+.each_wear:nth-child(4):hover #greyimg4{
+  opacity: 0;
+  display: none;
+}
+.each_wear:nth-child(4):hover #chooseimg4 {
+  display: block;
+}
 .wrap_footer {
   position: relative;
   top: 190px;
@@ -243,11 +268,13 @@
   text-decoration-line: underline;
   color: #808080;
   width: 204px;
+  z-index: 10;
+  position: relative;
 }
 .low_footer {
   font-size: 18px;
   line-height: 21px;
-  height: 45px;
+  height: 1px;
   position: relative;
   top: 67px;
   color: white;

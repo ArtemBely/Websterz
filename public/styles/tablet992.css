@@ -19,11 +19,19 @@
   }
   .not_a_rbt {
     position: absolute;
-    top: 258px;
+    top: -67px;
     color: white;
     font-size: 20px;
-    left: -1px;
+    left: 497px;
     width: 145px;
+  }
+  .check_auto {
+    font-size: 14px;
+    position: relative;
+    line-height: 140%;
+    color: #808080;
+    width: 304px;
+    top: 130px;
   }
   .wrap_vector, .wrap_star3, .wrap_star2 {
     display: none;

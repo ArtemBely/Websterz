@@ -7,6 +7,93 @@
   align-items: center;
   top: 93px;
 }
+.aboutInp {
+  position: absolute;
+  height: 1px;
+  opacity: 0;
+  margin: 0;
+}
+.wrap_reg_errors2 {
+  position: absolute;
+  top: 324px;
+  left: 0px;
+  height: 16px;
+  width: 340px;
+}
+.wrap_newpass {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.n_pass1 {
+    width: 240px;
+    height: 20px;
+}
+.rec_email2 {
+  height: 40px !important;
+  top: -38px !important;
+  left: 0px !important;
+}
+.n_pass_inp {
+  top: 17px !important;
+  position: relative;
+  left: -241px;
+}
+.n_pass_but {
+  top: -6px !important;
+}
+.wrap_reg_errors2_top {
+  top: 360px !important;
+}
+.newpass {
+  width: 500px;
+  background: #232226;
+  border-radius: 20px;
+  position: relative;
+  top: 82px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.wrap_recovery {
+  position: relative;
+  top: 106px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.recovery{
+  width: 667px;
+  height: 479px;
+  border-radius: 20px;
+  background: #232226;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rec_email {
+  height: 40px !important;
+  top: 37px !important;
+}
+.rec_inp {
+    top: -12px !important;
+    position: relative;
+}
+.rec_but {
+      top: 66px !important;
+      left: -367px !important;
+}
+.rec_form {
+      grid-template-rows: repeat(5, 1fr) !important;
+      top: 80px !important;
+}
+.check_auto {
+  font-size: 14px;
+  position: relative;
+  line-height: 140%;
+  color: #808080;
+  width: 204px;
+}
 .login_inside {
   position: relative;
   width: 667px;
@@ -16,6 +103,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.wrap_reg_errors {
+  position: absolute;
+  top: 495px;
+  left: 151px;
+  height: 16px;
+}
+.reg_errors {
+  font-size: 20px;
+  color: red;
+  margin: 0;
 }
 .login_form {
   position: relative;

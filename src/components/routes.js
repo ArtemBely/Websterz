@@ -16,7 +16,8 @@ const routes = [
     component: Profile
   },
   {
-    path: ['/login', '/registration', '/login/registration'],
+    path: ['/login', '/registration', '/login/registration',
+     '/login/recovery', '/login/reset/:token'],
     exact: true,
     component: Enter
   },
@@ -29,7 +30,7 @@ const routes = [
     path: '/login/admin_router',
     exact: true,
     component: LoginAdmin
-  }
+  },
 ]
 
 export default routes;

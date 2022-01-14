@@ -22,6 +22,9 @@
   .wrap_star1 {
     display: none;
   }
+  .move_right {
+    left: -160px;
+  }
   .scores_start_game {
     top: 146px;
   }
