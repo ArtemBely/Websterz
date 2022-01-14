@@ -18,6 +18,80 @@
     position: absolute;
     width: 295px;
 }
+.wrap_recovery {
+  top: 36px;
+  margin-bottom: 140px;
+}
+.recovery {
+  width: 310px;
+  height: 431px;
+}
+.enter_email1 {
+  top: -31px !important;
+  left: 20px;
+  width: 291px;
+}
+.rec_form2 {
+  top: 62px !important;
+}
+.wrap_reg_errors2 {
+  top: 344px;
+  left: 21px;
+  width: 247px;
+}
+.rec_pass2 {
+  top: -21px !important;
+}
+.n_pass1 {
+      top: -70px !important;
+}
+.enter_email1 {
+  font-size: 19px !important;
+}
+.rec_inp {
+      width: 260px !important;
+}
+.n_pass_inp {
+  top: -16px !important;
+      left: -222px !important;
+}
+.rec_email2 {
+  top: -70px !important;
+  left: 17px !important;
+}
+.wrap_reg_errors2_top {
+    top: 343px !important;
+}
+.n_pass_but {
+  left: 18px !important;
+  top: -24px !important;
+}
+.wrap_newpass {
+  position: relative;
+  top: -53px;
+  margin-bottom: 150px;
+}
+.newpass {
+      top: 82px;
+      width: 310px;
+}
+.n_pass_inp {
+      width: 261px !important;
+}
+.login_form {
+  width: 300px;
+}
+.rec_email {
+  left: -271px !important;
+  top: 57px !important;
+}
+.rec_inp {
+      top: 10px !important;
+}
+.rec_but {
+    top: 86px !important;
+    left: -271px !important;
+}
 .wrap_black_screen, .wrap_star3, .wrap_star2 {
   display: none;
 }

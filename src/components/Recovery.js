@@ -34,9 +34,9 @@ class Recovery extends React.Component {
     return (
       <div className='wrap_recovery'>
           <div className='recovery'>
-              <form action='/login/recovery' method='POST' className='login_form rec_form'>
+              <form action='/login/recovery' method='POST' className='login_form rec_form rec_form2'>
                   <p className='enter_to comm'>Восстановление пароля</p>
-                    <p><span className='no_acc comm'>Введите свой email, мы отправим Вам код для восстановления пароля</span></p>
+                    <p className='no_acc comm enter_email1'>Введите свой email, мы отправим Вам код для восстановления пароля</p>
                         <p className='your_email comm rec_email'>Ваш email</p>
                         <input type='text' name='recovery_email' placeholder='email@site.com' className='login_inp rec_inp' required/>
                   <button type='submit' className='rec_but' id='enter_but'>Восстановить</button>

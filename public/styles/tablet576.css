@@ -14,8 +14,14 @@
     left: 183px;
     top: 96px;
 }
+.newpass {
+  top: 28px;
+}
   .wrap_login {
     top: 29px;
+  }
+  .wrap_recovery {
+    top: 34px;
   }
   .wrap_vector, .wrap_star3, .wrap_star2 {
     display: none;

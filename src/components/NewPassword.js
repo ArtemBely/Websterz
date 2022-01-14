@@ -38,7 +38,7 @@ class NewPassword extends React.Component {
       <p className='wrap_newpass'>
           <div className='newpass'>
               <form action={'/login/reset/' + this.state.token} method='POST' className='login_form rec_form'>
-                  <p className='enter_to comm'>Восстановление пароля</p>
+                  <p className='enter_to comm rec_pass2'>Восстановление пароля</p>
                     <p className='no_acc comm n_pass1'>Введите новый пароль</p>
                     <input type='password' name='recovery_pass' className='login_inp rec_inp2 n_pass_inp' required/>
                     <p className='your_email comm rec_email2'>Повторите пароль</p>
