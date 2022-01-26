@@ -144,7 +144,7 @@ class Slider extends React.Component {
     this.move_right6.current.classList.add('move_right_start');
   }
 
-/*
+
 componentDidMount() {
     window.addEventListener('load', () => {
       setInterval(() => {
@@ -169,7 +169,7 @@ componentDidMount() {
       }, 25000);
     });
 }
-*/
+
 
   render() {
     return (

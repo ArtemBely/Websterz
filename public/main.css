@@ -1026,18 +1026,20 @@ body {
   color: white;
 }
 .post_inside, .pass_inside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #808080;
-  width: 280px;
-  height: 50px;
-  border: 2px solid #808080;
-  box-sizing: border-box;
-  border-radius: 7px;
-  font-size: 20px;
-  line-height: 140%;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      color: #808080;
+      width: 280px;
+      height: 50px;
+      border: 2px solid #808080;
+      box-sizing: border-box;
+      border-radius: 7px;
+      font-size: 20px;
+      line-height: 140%;
+      padding-left: 17px;
+      overflow: hidden;
 }
 .post_inside {
   top: -29px;
@@ -1075,6 +1077,7 @@ body {
   top: -22px;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  opacity: 0;
 }
 .profile_scores {
   font-size: 30px;
@@ -1407,6 +1410,9 @@ body {
   grid-template-rows: 15% 15% 70%;
   z-index: 5;
 }
+#which_score {
+  cursor: pointer;
+}
 .kills2 {
   position: relative;
   height: 510px;
@@ -1459,8 +1465,24 @@ body {
   position: relative;
   top: -36px;
 }
+.common_kills_imgs, .common_kills_imgs2 {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+}
 .everyGamer:hover > .common_kills_imgs {
   border: 5px solid #FFAC22;
+  -webkit-filter: unset;
+  -moz-filter: unset;
+  -o-filter: unset;
+  -ms-filter: unset;
+}
+.getColor {
+  -webkit-filter: unset !important;
+  -moz-filter: unset !important;
+  -o-filter: unset !important;
+  -ms-filter: unset !important;
 }
 .everyGamer:hover > .nick_of_gamer1 {
   color: #FFAC22;
@@ -1471,6 +1493,10 @@ body {
 
 .everyGamer2:hover > .common_kills_imgs2 {
   border: 5px solid #FFAC22;
+  -webkit-filter: unset;
+  -moz-filter: unset;
+  -o-filter: unset;
+  -ms-filter: unset;
 }
 .everyGamer2:hover > .nick_of_gamer2 {
   color: #FFAC22;
@@ -2933,12 +2959,22 @@ body {
   }
   .wrap_team {
     overflow: visible;
+    top: -60px;
   }
   #down_arrow {
     position: relative;
     left: -266px;
     top: 166px;
 }
+  #wr_gamers1 {
+    display: grid;
+    left: 14px !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 277px;
+    position: relative;
+    left: 20px !important;
+  }
 #file_img {
     position: absolute;
     width: 295px;
@@ -3118,86 +3154,104 @@ body {
   .teamTitle {
     font-size: 30px;
     line-height: 35px;
-    top: 14px;
+    top: 39px;
     left: 0;
   }
   #Pilguev {
     position: relative;
-    top: 339px;
-    left: 87px;
+    top: -8px;
+    left: -1px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
   .klydeep {
-    left: 127px !important;
-    top: -134px;
+    left: 39px !important;
+    top: -9px;
   }
   .pilguev {
-    left: 143px !important;
-    top: -149px;
+    left: 12px !important;
+    top: -21px;
   }
   #Re1GN1 {
-    left: 127px !important;
-    top: -133px;
+    left: 41px !important;
+    top: -8px;
   }
   #Re1GN2 {
-    left: 142px !important;
-    top: -148px;
+    left: 11px !important;
+    top: -20px;
   }
   .img_for_each_gamer {
     width: 130px;
   }
   .gamers:nth-child(5) {
-    top: 252px;
-    left: 87px;
+    top: -21px;
+    left: -1px;
   }
   .remill {
-    top: -135px;
-    left: 127px !important;
+    top: -9px;
+    left: 43px !important;
   }
   .romanov {
-    top: -151px;
-    left: 143px !important;
+    top: -22px;
+    left: 4px !important;
   }
   .gamers:nth-child(4) {
-    right: 173px;
-    top: 8px;
+    right: 0px;
+    top: -8px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
   }
   .magnolia {
-    top: -133px;
-    left: 127px !important;
+    top: -9px;
+    left: 32px !important;
   }
   .rodnov {
-    top: -146px;
-    left: 142px !important;
+    top: -21px;
+    left: 21px !important;
   }
   .gamers:nth-child(2) {
-    top: 96px;
-    left: -43px;
+    top: 0px;
+    left: 0px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
   }
   .gamers:nth-child(3) {
-    right: 173px;
-    top: -24px;
+    right: 0px;
+    top: 0px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
   }
   .gamers:nth-child(6) {
-    left: -44px;
-    top: 376px;
+    left: 0px;
+    top: -20px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
   }
    {
     top: -155px;
     left: 140px !important;
   }
   .h1te {
-    top: -133px;
-    left: 128px !important;
+    top: -9px;
+    left: 49px !important;
 }
   .khait {
-    top: -148px;
-    left: 144px !important;
+    top: -22px;
+    left: 13px !important;
   }
   .team {
         width: 320px;
   }
 .game {
   width: 320px;
+  }
+  .main_present {
+    top: 334px !important;
+  }
+  .wrap_main_footer {
+    position: relative;
+    height: 1px;
+    top: -200px;
   }
   .wrap_gamers, .wrap_gamers3 {
     width: 320px;
@@ -3206,6 +3260,11 @@ body {
     top: 53px;
     grid-template-columns: repeat(2, 1fr);
   }
+  #wrap_main_pr {
+    height: 1px;
+    top: -167px;
+    position: relative;
+  }
   .wrap_slider {
     height: 930px;
   }
@@ -3213,27 +3272,30 @@ body {
     left: 57px;
     font-size: 16px;
     line-height: 22px;
+    width: 100px;
   }
   .namesForNicks {
         left: 57px;
         font-size: 16px;
         line-height: 22px;
+        width: 121px;
   }
   .nickChill {
-    top: -132px !important;
-    left: 127px !important;
+    top: -8px !important;
+    left: 48px !important;
   }
   .nickChill2 {
-    left: 142px !important;
-    top: -147px !important;
+    left: -1px !important;
+    top: -20px !important;
     width: 150px;
   }
   .wrap_nicks {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     height: 86px;
-    top: 120px;
-    width: 260px;
+    top: 16px;
+    width: 252px;
+    left: 45px;
   }
   .all_nicks {
     display: grid;
@@ -3251,7 +3313,7 @@ body {
     grid-column: 2 / 3;
     grid-row: 1;
     position: relative;
-    left: 43px;
+    left: 0px;
     top: 0px;
   }
   .spec_imgs {
@@ -3261,7 +3323,7 @@ body {
   .all_nicks:nth-child(3) {
     position: relative;
     grid-column: 2 / 3;
-    left: 43px;
+    left: 0px;
     top: -41px;
     grid-row: 2 / 3;
     width: 100px;
@@ -3275,7 +3337,7 @@ body {
   .namesForNicks2{
     position: relative;
     top: -44px;
-    left: 100px;
+    left: 78px;
   }
   .next_game, .votes {
     font-size: 30px;
@@ -3296,7 +3358,7 @@ body {
   }
   .wrap_game {
     height: 505px;
-    top: 410px;
+    top: 275px;
   }
   .next_game {
     top: 48px;
@@ -4438,7 +4500,7 @@ body {
 
 
   .profile_scores {
-    left: -45px;
+    left: -67px;
     top: -334px;
     grid-column: 1 / 2;
   }

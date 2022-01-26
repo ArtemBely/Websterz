@@ -4,6 +4,7 @@ import Footer from './Footer';
 import Results from './Results';
 import BlackScreen from './BlackScreen';
 import { NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import eye from '../../public/images/Group-3.svg';
 import teamLogo from '../../public/images/Group (2).svg';
 import im1 from '../../public/images/Star 36 (1) — копия.svg';
@@ -37,39 +38,33 @@ class Vote extends React.Component{
     }
   }
 
-  actualDate = () => {
-    if(this.state.actualGame && this.state.actualGame.startOfGame) {
-      console.log(this.state.actualGame.startOfGame.getHours());
+actualDate = () => {
+  if(this.state.actualGame && this.state.actualGame.startOfGame) {
+    var endDate = this.state.actualGame.startOfGame.getTime();
+    let now = new Date().getTime();
+    let t = endDate - now;
+    if(t > 0)   {
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
       return (
         <p className='date_of_game'>
-        {(this.state.actualGame.startOfGame.getDate() - new Date().getDate() > 1 &&
-          this.state.actualGame.startOfGame.getHours() < new Date().getHours() ?
-          this.state.actualGame.startOfGame.getDate() - new Date().getDate() - 1 :
-          this.state.actualGame.startOfGame.getDate() - new Date().getDate() == 1 &&
-          (this.state.actualGame.startOfGame.getHours() - 1) <= new Date().getHours() ?
-          0 : this.state.actualGame.startOfGame.getDate() - new Date().getDate()
-        )
-           + ' ДЕНЬ ' +
-
-         ((this.state.actualGame.startOfGame.getHours() - 1) > new Date().getHours() &&
-          this.state.actualGame.startOfGame.getMinutes() < new Date().getMinutes() ?
-          this.state.actualGame.startOfGame.getHours() - new Date().getHours() - 2 :
-          (this.state.actualGame.startOfGame.getHours() - 1) > new Date().getHours() ?
-          this.state.actualGame.startOfGame.getHours() - new Date().getHours() - 1 :
-          23 - ((new Date().getHours() + 1) - this.state.actualGame.startOfGame.getHours())) + ' ЧАСОВ ' +
-
-          (this.state.actualGame.startOfGame.getMinutes() > new Date().getMinutes() ?
-           this.state.actualGame.startOfGame.getMinutes() - new Date().getMinutes() - 1 :
-           60 - (new Date().getMinutes() - this.state.actualGame.startOfGame.getMinutes())) + ' МИНУТ '
-        }</p>
+            { days + ' ДЕНЬ ' + hours + ' ЧАСОВ ' + mins + ' МИНУТ '}
+        </p>
       )
     }
     else {
       return (
-        <p className='date_of_game'>В ОЖИДАНИИ ИГРЫ</p>
+        <p className='date_of_game'>ИГРА ЗАВЕРШЕНА</p>
       )
-    }
   }
+}
+  else {
+    return (
+      <p className='date_of_game'>В ОЖИДАНИИ ИГРЫ</p>
+    )
+  }
+}
 
   render() {
     return(
@@ -94,11 +89,23 @@ class Vote extends React.Component{
                          {this.actualEnemyNameVote()}
                       </div>
                      <div className='do_choice_vote'>
-                   <p className='choice_inside_vote' style={{
-                     width: typeof window !== "undefined" && window.screen.width > 1320 ? '556px' : '275px'
-                   }}>{typeof window !== "undefined" && window.screen.width > 1320 ?
-                   'Дать прогноз и получить баллы за правильный ответ' :
-                   'Сделать свой выбор'}</p>
+                     <Link activeClass="active"
+                         className='choice_inside_vote'
+                         to="which_score"
+                         style={{
+                           width: typeof window !== "undefined" && window.screen.width > 1320 ? '556px' : '275px'
+                         }}
+                         spy={true}
+                         smooth={true}
+                         hashSpy={true}
+                         duration={700}
+                         isDynamic={true}
+                         onSetActive={this.handleSetActive}
+                         onSetInactive={this.handleSetInactive}
+                         ignoreCancelEvents={false}>
+                         {typeof window !== "undefined" && window.screen.width > 1320 ?
+                         'Дать прогноз и получить баллы за правильный ответ' :
+                         'Сделать свой выбор'}</Link>
                 </div>
               </div>
           </div>

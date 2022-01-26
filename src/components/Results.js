@@ -4,10 +4,10 @@ import Footer from './Footer';
 import bee from '../../public/images/Frame 17.svg';
 import teamLogo from '../../public/images/Group (2).svg';
 import gamer1 from '../../public/images/unsplash_WZB_ZOqR4dA.png';
-import gamer2 from '../../public/images/unsplash_pUhxoSapPFA — копия.png';
-import gamer3 from '../../public/images/unsplash_eyFbjKWlR2g — копия.png';
-import gamer4 from '../../public/images/unsplash_d1UPkiFd04A — копия.png';
-import gamer5 from '../../public/images/unsplash_WNoLnJo7tS8 — копия.png';
+import gamer2 from '../../public/images/unsplash_pUhxoSapPFA2.png';
+import gamer3 from '../../public/images/unsplash_eyFbjKWlR2g2.png';
+import gamer4 from '../../public/images/unsplash_d1UPkiFd04A2.png';
+import gamer5 from '../../public/images/unsplash_WNoLnJo7tS82.png';
 
 class Results extends React.Component{
 
@@ -55,92 +55,102 @@ class Results extends React.Component{
   kd1F = () => {
     this.bestKd.current.value = this.kd1.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs2').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer2').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.kd1.current.classList.add('choosenGamerText');
     this.bestKdImg1.current.classList.add('choosenGamer');
+    this.bestKdImg1.current.classList.add('getColor');
   }
   kd2F = () => {
     this.bestKd.current.value = this.kd2.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs2').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer2').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.kd2.current.classList.add('choosenGamerText');
     this.bestKdImg2.current.classList.add('choosenGamer');
+    this.bestKdImg2.current.classList.add('getColor');
   }
   kd3F = () => {
     this.bestKd.current.value = this.kd3.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs2').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer2').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.kd3.current.classList.add('choosenGamerText');
     this.bestKdImg3.current.classList.add('choosenGamer');
+    this.bestKdImg3.current.classList.add('getColor');
   }
   kd4F = () => {
     this.bestKd.current.value = this.kd4.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs2').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer2').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.kd4.current.classList.add('choosenGamerText');
     this.bestKdImg4.current.classList.add('choosenGamer');
+    this.bestKdImg4.current.classList.add('getColor');
   }
   kd5F = () => {
     this.bestKd.current.value = this.kd5.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs2').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer2').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.kd5.current.classList.add('choosenGamerText');
     this.bestKdImg5.current.classList.add('choosenGamer');
+    this.bestKdImg5.current.classList.add('getColor');
   }
 
   fk1F = () => {
     this.firstKill.current.value = this.fk1.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer1').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.comKillImg1.current.classList.add('choosenGamer');
+    this.comKillImg1.current.classList.add('getColor');
     this.fk1.current.classList.add('choosenGamerText');
   }
   fk2F = () => {
     this.firstKill.current.value = this.fk2.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer1').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.comKillImg2.current.classList.add('choosenGamer');
+    this.comKillImg2.current.classList.add('getColor');
     this.fk2.current.classList.add('choosenGamerText');
   }
   fk3F = () => {
     this.firstKill.current.value = this.fk3.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer1').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.comKillImg3.current.classList.add('choosenGamer');
+    this.comKillImg3.current.classList.add('getColor');
     this.fk3.current.classList.add('choosenGamerText');
   }
   fk4F = () => {
     this.firstKill.current.value = this.fk4.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer1').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.comKillImg4.current.classList.add('choosenGamer');
+    this.comKillImg4.current.classList.add('getColor');
     this.fk4.current.classList.add('choosenGamerText');
   }
   fk5F = () => {
     this.firstKill.current.value = this.fk5.current.innerHTML;
     document.querySelectorAll('.common_kills_imgs').forEach(item =>
-    item.classList.remove('choosenGamer'));
+    item.classList.remove('choosenGamer', 'getColor'));
     document.querySelectorAll('.nick_of_gamer1').forEach(item =>
     item.classList.remove('choosenGamerText'));
     this.comKillImg5.current.classList.add('choosenGamer');
+    this.comKillImg5.current.classList.add('getColor');
     this.fk5.current.classList.add('choosenGamerText');
   }
 
@@ -153,7 +163,7 @@ class Results extends React.Component{
   }
 
   actualEnemyName = () => {
-    if(this.state.actualGameId && this.state.actualGameId.logoOfEnemy) { 
+    if(this.state.actualGameId && this.state.actualGameId.logoOfEnemy) {
       return(
         <p className='enemy2'><img src={'../uploads/' + this.state.actualGameId.logoOfEnemy} id='img_inside3'/></p>
       )
@@ -230,7 +240,7 @@ class Results extends React.Component{
       <div className='wrap_results'>
           <form action='/profile/vote/results' method='POST' className='results_form'>
                   <div className='result_scores'>
-                      <p className='will_score'>Какой будет счёт?</p>
+                      <p className='will_score' id='which_score'>Какой будет счёт?</p>
                       {this.scoresOfBattle()}
                       <p className='logo_team'><img src={teamLogo} id='teamLogo3'/></p>
                       <input type='text' name='score1' className='scores_inp scores_inp1' placeholder='30' required/>

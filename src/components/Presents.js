@@ -6,7 +6,7 @@ function Present() {
 
 
     return (
-      <div className='wrap_present'>
+      <div className='wrap_present main_present'>
           <div className='present'>
               <div className='votes'>голосуй и Получай призы</div>
               <div className='wrap_wear'>

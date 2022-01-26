@@ -35,8 +35,8 @@ class Header extends React.Component {
     if(typeof window !== "undefined" && window.location.pathname == '/') {
       return (
         <div className='header'>
-           <p className='wrap_logo'><NavLink to={this.state.user ? '/profile' : '/'}>
-            <img src={bee} id='bee1' className='bee'/></NavLink></p>
+           <p className='wrap_logo'><a href={this.state.user ? '/profile' : '/'}>
+            <img src={bee} id='bee1' className='bee'/></a></p>
             <Link activeClass="active"
                 className='header_link team_header'
                 to="team_link"

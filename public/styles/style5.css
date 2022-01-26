@@ -8,6 +8,9 @@
   grid-template-rows: 15% 15% 70%;
   z-index: 5;
 }
+#which_score {
+  cursor: pointer;
+}
 .kills2 {
   position: relative;
   height: 510px;
@@ -60,8 +63,24 @@
   position: relative;
   top: -36px;
 }
+.common_kills_imgs, .common_kills_imgs2 {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+}
 .everyGamer:hover > .common_kills_imgs {
   border: 5px solid #FFAC22;
+  -webkit-filter: unset;
+  -moz-filter: unset;
+  -o-filter: unset;
+  -ms-filter: unset;
+}
+.getColor {
+  -webkit-filter: unset !important;
+  -moz-filter: unset !important;
+  -o-filter: unset !important;
+  -ms-filter: unset !important;
 }
 .everyGamer:hover > .nick_of_gamer1 {
   color: #FFAC22;
@@ -72,6 +91,10 @@
 
 .everyGamer2:hover > .common_kills_imgs2 {
   border: 5px solid #FFAC22;
+  -webkit-filter: unset;
+  -moz-filter: unset;
+  -o-filter: unset;
+  -ms-filter: unset;
 }
 .everyGamer2:hover > .nick_of_gamer2 {
   color: #FFAC22;

@@ -27,6 +27,12 @@ class Enter extends React.Component{
 
     }
 
+    componentDidMount() {
+      if(typeof window != 'undefined') {
+        window.scrollTo(0, 0);
+      }
+    }
+
   render() {
     return(
       <p className='enter'>

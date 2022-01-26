@@ -41,7 +41,7 @@ class Main extends React.Component{
           <Presents />
           <Star2 />
           <Star3 />
-          <Footer />
+          <p className='wrap_main_footer'><Footer /></p>
       </div>
     )
   }
